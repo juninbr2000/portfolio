@@ -375,6 +375,9 @@
     & .project_card_info_icons{
         margin-bottom: 20px;
     }
+    & .secondary{
+        margin-left: 5px;
+    }
 }
 .project_card::after{
     content: '';
@@ -402,9 +405,13 @@
     border-radius: 5px;
     z-index: -1;
 }
-.projects > a{
-    margin-top: 20px;
+.projects .butt{
+    margin-top: 30px;
     margin-left: 0;
+    & a{
+        transform: perspective(2em) rotateX(30deg);
+        margin-left: 0;
+    }
 }
 
 
