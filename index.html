@@ -10,163 +10,203 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <title>Edson Jr | Portifolio</title>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <h1 class="logo">&#60;EJR/&#62;<span>Front-End Developer</span></h1>
+    <nav class="nav container">
+        <div class="nav_logo">
+            <h1 class="nav_logo_main">&lt;EJR/&gt;</h1>
+            <p class="nav_logo_subtitle">Front-End Developer</p>
+        </div>
+        <button class="nav_button" sr="Menu"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav_menu ocult">
+            <li class="nav_menu_list"><a href="#">Inicio</a></li>
+            <li class="nav_menu_list"><a href="#aboult">Sobre</a></li>
+            <li class="nav_menu_list"><a href="#projetos">Projetos</a></li>
+            <li class="nav_menu_list"><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+    <header class="header container">
+        <div class="header_left">
+            <div class="header_title">
+                <h1 class="header_title_logo">&lt;Edson Junior /&gt;</h1>
+                <h3 class="header_title_subtitle">Front-End developer</h3>
+            </div>
+            <div class="header_buttons">
+                <button class="primary">Projetos</button>
+                <button class="secondary">Contatos</button>
+            </div>
+        </div>
+        <div class="header_imagem">
+            <img src="./assets/WhatsApp Image 2024-08-27 at 14.50.30.jpeg" alt="">
+            <div class="bolha"></div>
+            <div class="bolha"></div>
+            <div class="bolha"></div>
+        </div>
+    </header>
 
-            <div class="button-area">
-                <p>ligth/dark:</p>
-                <button id="mode"></button>
-            </div>
-        </nav>
-        <header class="top-header">
-            <div class="info-container">
-                <h1 class="logo">&#60;Edson Junior/&#62;</h1>
-                <h2>Front-End Developer</h2>
-                
-                <div class="buttons-container">
-                    <a href="#contato" class="primary">Contato</a>
-                    <a href="#projeto" class="secondary">Projetos</a>
-                </div>
-            </div>
-            <div class="image-container">
-                <img src="./assets/vecteezy_digital-marketing-3d-icon-illustration-for-your-website_9418801.png" alt="">
-            </div>
-        </header>
-        <section class="About-me">
-            <h2 class="section-title">Sobre mim</h2>
+    <section class="main_section container" id="aboult">
+        <div class="my_info">
+            <h2 class="title">Sobre mim</h2>
+            <span class="ligth"></span>
             <p>Olá! Meu nome é Edson, sou desenvolvedor Front-End e apaixonado por criar experiências web incríveis. Minha jornada começou em 2022 quando, fascinado pela capacidade de criar coisas incríveis com apenas algumas linhas de código, mergulhei de cabeça no mundo da programação. Desde então, tenho me maravilhado com as infinitas possibilidades que a tecnologia oferece e estou constantemente buscando aprender e evoluir como desenvolvedor.</p>
-            <p>Minhas principais habilidades incluem HTML, CSS, JavaScript, ReactJS e Figma. Estou constantemente aprendendo e me atualizando para ficar por dentro das últimas tendências e tecnologias no mundo do desenvolvimento web.</p>
-            <p>Meu objetivo é crescer profissionalmente na área de desenvolvimento web, buscando constantemente desafios que me permitam expandir minhas habilidades e conhecimentos. Estou pronto para enfrentar novos desafios e aproveitar ao máximo as oportunidades de crescimento que surgirem no meu caminho.</p>
-            <p>Se você está procurando um desenvolvedor comprometido e apaixonado para o seu próximo projeto, ou apenas quer bater um papo sobre tecnologia, não hesite em <a href="#contato">entrar em contato</a>.</p>
-        </section>
-        <section class="area-hability">
-            <h2 class="section-title">Habilidades</h2>
-            <div class="card-container">
-                <div class="card">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3 class="title-card">Html5</h3>
-                </div>
-                <div class="card">
-                    <i class="fa-brands fa-css3"></i>
-                    <h3 class="title-card">Css3</h3>
-                </div>
-                <div class="card">
-                    <i class="fa-brands fa-js"></i>
-                    <h3 class="title-card">JavaScript</h3>
-                </div>
-                <div class="card">
-                    <i class="fa-brands fa-react"></i>
-                    <h3 class="title-card">React-Js</h3>
-                </div>
-                <div class="card">
-                    <i class='bx bxl-typescript'></i>
-                    <h3 class="title-card">TypeScript</h3>
-                </div>
-                <div class="card">
-                    <i class='fa-brands fa-git-alt'></i>
-                    <h3 class="title-card">Git</h3>
-                </div>
-                <div class="card">
-                    <i class='fa-brands fa-figma'></i>
-                    <h3 class="title-card">Figma</h3>
-                </div>
-                <div class="card">
-                    <i class='fa-brands fa-node'></i>
-                    <h3 class="title-card">Nodejs</h3>
-                </div>
-                <div class="card">
-                    <i class='fa-brands fa-react'></i>
-                    <h3 class="title-card">React-Native</h3>
-                </div>
-            </div>
-        </section>
+            <span class="ligth"></span>
+        </div>
+        <div class="habillity">
+            <h2 class="title">Minhas habilidades</h2>
+            
+            <div class="card_container">
 
-        <section class="projects-area" id="projeto">
-            <h2 class="section-title">Principais Projetos</h2>
-            <div class="projects">
-                <img src="./assets/WhatsApp Image 2024-04-01 at 15.00.08.jpeg" alt="">
-                <div class="info-project">
-                    <h3 class="title">LBMovies</h3>
-                    <p>Neste projeto foi utilizado a API do TMDB, que é uma API que disponibiliza informaçoes sobre filmes e series, tambem foi utilizado o React na criaçao da pagina, alem de HTML e CSS.</p>
-                    <div class="buttons-area">
-                        <a href="https://lb-movies.netlify.app/" target="_blank" class="primary"><i class="fa-solid fa-link"></i>Ver Site</a>
-                        <a href="https://github.com/juninbr2000/moviesLibrary" class="secondary"><i class="fa-brands fa-github"></i>Ver no github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projects">
-                <img src="./assets/WhatsApp Image 2024-04-01 at 15.00.58.jpeg" alt="">
-                <div class="info-project">
-                    <h3 class="title">LinkScape</h3>
-                    <p>LinkScape é um agrupador de links, nesse projeto foi usado ReactJS e firebase para lidar com dados dos usuarios</p>
-                    <div class="buttons-area">
-                        <a href="https://linkscape.netlify.app/" target="_blank" class="primary"><i class="fa-solid fa-link"></i>Ver Site</a>
-                        <a href="https://github.com/juninbr2000/linkScape" class="secondary"><i class="fa-brands fa-github"></i>Ver no github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projects">
-                <img src="./assets/WhatsApp Image 2024-04-01 at 14.59.33.jpeg" alt="">
-                <div class="info-project">
-                    <h3 class="title">TempSearch</h3>
-                    <p>Essa pagina foi criada usando HTML, CSS e JavaScript, alem de usar a API do OpenWeather, que disponibiliza informações sobre o tempo de qualquer lugar do mundo</p>
-                    <div class="buttons-area">
-                        <a href="https://tempo-prev.netlify.app/" target="_blank" class="primary"><i class="fa-solid fa-link"></i>Ver Site</a>
-                        <a href="https://github.com/juninbr2000/previsao" class="secondary"><i class="fa-brands fa-github"></i>Ver no github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projects">
-                <img src="./assets/WhatsApp Image 2024-04-01 at 14.58.42.jpeg" alt="">
-                <div class="info-project">
-                    <h3 class="title">All Des.</h3>
-                    <p>All Des. foi a primeira landing page feita por mim, usa apenas HTML, CSS e uma biblioteca JavaScript chamada Animate on Scrool (AOS). (somente versão de desktop)</p>
-                    <div class="buttons-area">
-                        <a href="https://alldesing.netlify.app/" target="_blank" class="primary"><i class="fa-solid fa-link"></i>Ver Site</a>
-                        <a href="https://github.com/juninbr2000/landigpage" class="secondary"><i class="fa-brands fa-github"></i>Ver no github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projects">
-                <img src="./assets/WhatsApp Image 2024-05-02 at 13.31.37.jpeg" alt="">
-                <div class="info-project">
-                    <h3 class="title">Imoveis Gentil</h3>
-                    <p>Imoveis Gentil foi uma pagina criada para uma imobiliaria, foi usando ReactJs para a montagem da pagina e tambem foi usado firebase para adição e gerenciamento de conteudo da pagina</p>
-                    <div class="buttons-area">
-                        <a href="#" class="primary" ><i class="fa-solid fa-link"></i>Ver Site</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer class="footer-cont">
-            <div id="contato">
-                <h2 class="logo">&lt;EJr/&gt; <span>Front-End Developer</span></h2>
-                <h2>Contatos</h2>
-                <p><i class="fa-solid fa-envelope"></i> Meu email:</p>
-                <div class="inp">
-                    <input type="text" readonly id="email" value="edson.gentil.junior@gmail.com">
-                    <button class="copy"><i class="fa-solid fa-paperclip"></i> Copiar email</button>
+                <div class="skill-bar" data-skill="HTML">
+                    <div class="skill-level" style="width: 90%;"></div>
                 </div>
                 
+                <div class="skill-bar" data-skill="CSS">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="JavaScript">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="React">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="React Native">
+                    <div class="skill-level" style="width: 52%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="Figma">
+                    <div class="skill-level" style="width: 65%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="Node.js">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+                
+                <div class="skill-bar" data-skill="Git">
+                    <div class="skill-level" style="width: 68%;"></div>
+                </div>
+                
+                <!-- <div class="skill-bar" data-skill="Angular">
+                    <div class="skill-level" style="width: 43%;"></div>
+                </div> -->
+                
             </div>
-            <div class="social">
-                <h2>Minhas Redes Sociais</h2>
-                <a href="https://instagram.com/edsong.jr"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i><p>Linkedin</p></a>
-                <a href="https://github.com/juninbr2000"><i class="fa-brands fa-github"></i><p>GitHub</p></a>
+        </div>
+    </section>
+
+    <section class="projects container" id="projetos">
+        <h2 class="title">Projetos</h2>
+        <div class="project_card">
+            <img src="./assets/WhatsApp Image 2024-05-02 at 13.31.37.jpeg" alt="">
+            <div class="project_card_info">
+                <h3 class="project_card_title">Imóveis Gentil</h3>
+                <p>Imóveis gentil foi desenvolvida para uma corretora de Imóveis, onde os usuarios podem ver fotos e mais informações dos imoveis, possui uma dashboard onde o corretor pode adicionar editar e excluir os imoveis</p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <i class="fa-brands fa-figma"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="button_container">
+                    <a href="" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                </div>
             </div>
-            <p class="marca">feito por &lt;Edson Junior/&gt;</p>
-        </footer>
+        </div>
+        <div class="project_card">
+            <img src="./assets/WhatsApp Image 2024-04-01 at 15.00.58.jpeg" alt="">
+            <div class="project_card_info">
+                <h3 class="project_card_title">LinkScape</h3>
+                <p>LinkScape funciona como um agrupador de links, ao criar uma conta o usuario consegue adicionar o link de suas redes sociais, atualizar os links ou exclui-los. Alem de poder personalizar o perfil da melhor maneira possivel. </p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-node"></i>
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="button_container">
+                    <a href="" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                    <a href="" class="secondary"><i class="fa-brands fa-github"></i> Ver code</a>
+                </div>
+            </div>
+        </div>
+        <div class="project_card">
+            <img src="./assets/WhatsApp Image 2024-04-01 at 15.00.08.jpeg" alt="">
+            <div class="project_card_info">
+                <h3 class="project_card_title">LB Movies</h3>
+                <p>LB Movies foi feito para pesquisa de dados de filmes e series utilizando a API do TMDB, pode ser usado para encontrar informações relevantes sobreseu filme ou serie favorito</p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="button_container">
+                    <a href="" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                    <a href="" class="secondary"><i class="fa-brands fa-github"></i> Ver code</a>
+                </div>
+            </div>
+        </div>
+        <div class="project_card">
+            <img src="./assets/WhatsApp Image 2024-08-30 at 13.20.12.jpeg" alt="">
+            <div class="project_card_info">
+                <h3 class="project_card_title">Previsão do Tempo</h3>
+                <p>Foi feito utilizando a API do OpenWeatherMap, o usuario pode buscar a previsão do tempo em sua cidade</p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <div class="button_container">
+                    <a href="" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                    <a href="" class="secondary"><i class="fa-brands fa-github"></i> Ver code</a>
+                </div>
+            </div>
+        </div>
+        <div class="butt">
 
-        <div id="particles-js"></div>
-
-        <script src="particles.js"></script>
-    </div>
+            <a href="#" class="secondary"><i class="fa-brands fa-github"></i> Veja outros projetos no github</a>
+        </div>
+    </section>
+    <section class="contacts" id="contatos">
+        <h2 class="title">Entre em Contato</h2>
+        <div class="contacts_info">
+            <a href="https://wa.me/5535992527472" class="whats_btn"><i class="fa-brands fa-whatsapp"></i> Converse comigo pelo Whatsapp</a>
+            
+            <label class="label_inp">
+                <h4><i class="fa-solid fa-envelope"></i> Meu Email</h4>
+                <div class="input">
+                    <input type="text" readonly value="edson.gentil.junior@gmail.com">    
+                    <button> Copiar Email </button>
+                </div>
+            </label>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_social">
+            <h4>Siga-me nas redes sociais</h4>
+            <div class="social_icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer_links">
+            <a href="#">Inicio</a>
+            <a href="#aboult">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contatos">Contatos</a>
+        </div>
+        <p>&copy; 2024 Edson Jr. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="index.js"></script>
 </body>
 </html>
