@@ -11,4 +11,8 @@ navButton.addEventListener('click', () => {
 buttonCopy.addEventListener('click', () => {
     inputValue.select()
     document.execCommand('copy')
+    buttonCopy.innerText = "Copiado!"
+    setTimeout(() => {
+        buttonCopy.innerText = "Copiar Email"
+    }, 5000);
 })
