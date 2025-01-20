@@ -1,0 +1,14 @@
+{
+    "html": { "icon": "./assets/html.svg" },
+    "css": { "icon": "./assets/css.svg" },
+    "js": { "icon": "./assets/javascript.svg" },
+    "react": { "icon": "./assets/react.svg" },
+    "native": { "icon": "./assets/react.svg" },
+    "next": { "icon": "./assets/next.svg"},
+    "node": { "icon": "./assets/node.svg" },
+    "git": { "icon": "./assets/git.svg" },
+    "tailwind": { "icon": "./assets/tailwind.svg" },
+    "ts": { "icon": "./assets/typescript.svg" },
+    "figma": { "icon": "./assets/figma.svg" }
+
+}

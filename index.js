@@ -1,37 +1,44 @@
-// Espera o documento HTML ser completamente carregado
-document.addEventListener("DOMContentLoaded", function() {
-    // Obtém o elemento com a classe .container
-    const containerElement = document.querySelector(".container");
-    const darkModeButton = document.querySelector("#mode")
-    
-    // Verifica o tema do computador
-    const theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+const navButton = document.querySelector('.nav_button');
+const nav = document.querySelector('.nav_menu')
+const habilityContainer = document.querySelector('.hability_container')
 
-    const updateThemeColor = () => {
-        if (theme === true && containerElement) {
-            // Adiciona a classe "dark" ao elemento .container se o tema for escuro
-            containerElement.classList.add("dark");
-            verifyIconDarkMode()
+navButton.addEventListener('click', () => {
+    nav.classList.toggle('ocult')
+})
+
+async function getHability () {
+
+    try{
+        const habilityList = await fetch('./skil.json')
+
+        if(!habilityList){
+            console.error('ocorreu um erro ao buscar as habilidades')
+            hability.innerHTML = '<p>Ocorreu um erro</p>'
         }
-    };
+        
+        const data = await habilityList.json()
 
-    //função para verificar o icone do botão de dark mode
-    const verifyIconDarkMode = () => {
-        if(containerElement.classList.contains("dark")){
-            darkModeButton.innerHTML = '<i class="fa-solid fa-moon"></i>'
-        } else {
-            darkModeButton.innerHTML = '<i class="fa-solid fa-sun"></i>'
-        }
-    }
 
-    //adiciona o evento do botão de modo escuro
-    darkModeButton.addEventListener("click", () => {
-        containerElement.classList.toggle("dark");
-        verifyIconDarkMode()
+        habilityContainer.innerHTML = '';
+
+    // Itera sobre as chaves do objeto
+    Object.entries(data).forEach(([key, value]) => {
+        const skillHTML = `
+            <div class="skill-card">
+                <img src="${value.icon}" alt="${key}" class="skill-icon">
+                <span>${key.toUpperCase()}</span>
+            </div>
+        `;
+
+        // Adiciona cada habilidade ao container
+        habilityContainer.innerHTML += skillHTML;
     })
 
-    
-    
-    updateThemeColor(); // Chama a função para aplicar o tema inicialmente
-});
+    } catch (e) {
+        console.error(e)
+    }
+
+
+}
+
+getHability()

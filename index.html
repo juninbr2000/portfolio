@@ -5,105 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/baa7dffef8.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
-    <title>Edson Jr | Portifolio</title>
-    <script src="index.js"></script>
+    <title>Edson Jr | Portfolio</title>
+
 </head>
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <div class="logo_area">
-                <h2 class="logo">&#60;EJr./&#62;</h2>
-                <p>Font-end Developer</p>
+    <nav class="nav container">
+        <img src="./assets/Vector 14.svg" alt="" class="nav_logo">
+        <button class="nav_button" sr="Menu"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav_menu ocult">
+            <li class="nav_menu_list"><a href="#">Inicio</a></li>
+            <li class="nav_menu_list"><a href="#aboult">Sobre</a></li>
+            <li class="nav_menu_list"><a href="#projetos">Projetos</a></li>
+            <li class="nav_menu_list"><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+    <header class="header container">
+        <div class="header_left">
+            <div class="header_title">
+                <h4 class="header_title_subtitle"><span id="hands">&#128075;</span> Olá, meu nome é</h4>
+                <h1 class="header_title_logo">Edson Junior</h1>
+                <h4 class="header_title_subtitle">e sou <span class="destaque">Desenvolvedor Front-End</span> &#128187</h4>
             </div>
-            <div class="button-theme">
-                <p>dark/light</p>
-                <button id="mode"><i class="fa-solid fa-sun"></i></button>
+            <div class="header_buttons">
+                <a href="#"><img src="./assets/linkedin.svg" alt="linkedin" /></a>
+                <a href="#"><img src="./assets/github.svg" alt="github" /></a>
+                <a href="https://www.instagram.com/edsong.jr?igsh=MW0wY25iZzRub3UxNg=="><img src="./assets/instagram.svg" alt="instagram" /></a>
             </div>
-        </nav>
-        <header class="header-banner">
-            <div>
-                <h1 class="logo"><span>&#60;Edson Júnior/&#62;</span></h1>
-                <p>Front-end developer</p>
-                <div class="buttons-area">
-                    <button class="primary-button">Contratar</button>
-                    <a href="#projects" class="secondary-button">Projetos</a>
-                </div>
-            </div>
-            <div class="design">
+        </div>
+        <div class="header_imagem">
+            <img src="./assets/WhatsApp Image 2025-01-17 at 13.41.34.jpeg" alt="">
+            <div class="bolha"></div>
+            <div class="bolha"></div>
+        </div>
+    </header>
 
+    <section class="main_section container" id="aboult">
+        <div class="my_info">
+            <h2 class="title">Deixe-me apresentar &#129309;</h2>
+            <p>
+                Sou Desenvolvedor Front-End, apaixonado por transformar designs em sites interativos e funcionais. 
+                Comecei minha jornada na programação em 2022 e, desde então, tenho explorado as infinitas possibilidades dessa área, que continua a me surpreender a cada dia.
+            </p>
+            <a href="#" class='primary'>Meu curriculo</a>
+        </div>
+        <div class="habillity">
+            <h2 class="title">Minhas habilidades &#128640;</h2>
+            
+            <div class="hability_container">
+
+
+                
             </div>
-        </header>
-        <section class="hability-section">
-            <h2 class="section-title">Habilidades: </h2>
-            <div class="itens-container">
-                <div class="card html">
-                    <i class="fa-brands fa-html5"></i>
-                    <p>HTML</p>
+        </div>
+    </section>
+
+    <section class="projects container" id="projetos">
+        <h2 class="title">Meus Projetos &#128207;</h2>
+        <div class="project_card">
+            <img src="./assets/ImoveisGentil_mockup.png" alt="" class="mockup">
+            <div class="project_card_info">
+                <h3 class="project_card_title">Imóveis Gentil</h3>
+                <p>Imóveis gentil foi desenvolvida para uma corretora de Imóveis, onde os usuarios podem ver fotos e mais informações dos imoveis, possui uma dashboard onde o corretor pode adicionar editar e excluir os imoveis</p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <img src="./assets/figma.svg" alt="figma" class="icon">
+                    <img src="./assets/html.svg" alt="html" class="icon">
+                    <img src="./assets/css.svg" alt="css" class="icon">
+                    <img src="./assets/javascript.svg" alt="javascript" class="icon">
+                    <img src="./assets/react.svg" alt="react" class="icon">
                 </div>
-                <div class="card css">
-                    <i class="fa-brands fa-css3"></i>
-                    <p>CSS</p>
-                </div>
-                <div class="card js">
-                    <i class="fa-brands fa-js"></i>
-                    <p>JavaScript</p>
-                </div>
-                <div class="card react">
-                    <i class="fa-brands fa-react"></i>
-                    <p>React</p>
-                </div>
-                <div class="card ts">
-                    <i class='bx bxl-typescript'></i>
-                    <p>TypeScript</p>
-                </div>
-                <div class="card git">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <p>Git</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2 class="section-title">Projetos: </h2>
-            <div class="projects-container">
-                <div class="project">
-                    <img src="./assets/WhatsApp Image 2024-04-01 at 14.58.42.jpeg" alt="">
-                    <div class="info">
-                        <h2>allDes.</h2>
-                        <a href="#" class="primary-button" target="_blank">Ver site</a>
-                        <a href="#" class="secondary-button" target="_blank"><i class="fa-brands fa-github"></i>Ver no Github</a>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="./assets/WhatsApp Image 2024-04-01 at 14.59.33.jpeg" alt="">
-                    <div class="info">
-                        <h2>App Previsão do tempo</h2>
-                        <a href="#" class="primary-button" target="_blank">Ver site</a>
-                        <a href="#" class="secondary-button" target="_blank"><i class="fa-brands fa-github"></i>Ver no Github</a>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="assets/WhatsApp Image 2024-04-01 at 15.00.08.jpeg" alt="">
-                    <div class="info">
-                        <h2>LbMovies</h2>
-                        <a href="#" class="primary-button" target="_blank">Ver site</a>
-                        <a href="#" class="secondary-button" target="_blank"><i class="fa-brands fa-github"></i>Ver no Github</a>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="assets/WhatsApp Image 2024-04-01 at 15.00.58.jpeg" alt="">
-                    <div class="info">
-                        <h2>LinkScape</h2>
-                        <a href="#" class="primary-button" target="_blank">Ver site</a>
-                        <a href="#" class="secondary-button" target="_blank"><i class="fa-brands fa-github"></i>Ver no Github</a>
-                    </div>
+                <div class="button_container">
+                    <a href="https://imoveisgentil.com.br" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
                 </div>
             </div>
-            <a href="#" class="primary-button">Ver mais</a>
-        </section>
-    </div>
+        </div>
+        <div class="project_card">
+            <img src="./assets/Linkscape_mockup.png" alt="" class="mockup">
+            <div class="project_card_info">
+                <h3 class="project_card_title">LinkScape</h3>
+                <p>LinkScape funciona como um agrupador de links, ao criar uma conta o usuario consegue adicionar o link de suas redes sociais, atualizar os links ou exclui-los. Alem de poder personalizar o perfil da melhor maneira possivel. </p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <img src="./assets/html.svg" alt="html" class="icon">
+                    <img src="./assets/css.svg" alt="css" class="icon">
+                    <img src="./assets/javascript.svg" alt="javascript" class="icon">
+                    <img src="./assets/react.svg" alt="react" class="icon">
+                    <img src="./assets/node.svg" alt="node" class="icon">
+
+                </div>
+                <div class="button_container">
+                    <a href="https://linkscape.netlify.app" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                    <a href="https://github.com/juninbr2000/linkScape" class="secondary"><i class="fa-brands fa-github"></i> Ver code</a>
+                </div>
+            </div>
+        </div>
+        <div class="project_card">
+            <img src="./assets/Filmania_mockup.png" alt="" class="mockup">
+            <div class="project_card_info">
+                <h3 class="project_card_title">Filmania (em desenvolvimento)</h3>
+                <p>Filmania foi feito para pesquisa de dados de filmes utilizando a API do TMDB, pode ser usado para encontrar informações relevantes sobre seu filme favorito</p>
+                <p class="tecnology">Tecnologias usadas:</p>
+                <div class="project_card_info_icons">
+                    <img src="./assets/html.svg" alt="html" class="icon">
+                    <img src="./assets/css.svg" alt="css" class="icon">
+                    <img src="./assets/javascript.svg" alt="javascript" class="icon">
+                    <img src="./assets/typescript.svg" alt="typescript" class="icon">
+                    <img src="./assets/next.svg" alt="next" class="icon">
+                    <img src="./assets/tailwind.svg" alt="tailwind" class="icon">
+                </div>
+                <div class="button_container">
+                    <a href="https://lb-movies.netlify.app" class="primary"><i class="fa-solid fa-eye"></i> Ver deploy</a>
+                    <a href="https://github.com/juninbr2000/moviesLibrary" class="secondary"><i class="fa-brands fa-github"></i> Ver code</a>
+                </div>
+            </div>
+        </div>
+        <div class="butt">
+            <a href="https://github.com/juninbr2000?tab=repositories" class="secondary"><i class="fa-brands fa-github"></i> Veja outros projetos no github</a>
+        </div>
+    </section>
+    <section class="contacts" id="contatos">
+        <h2 class="title">Entre em Contato</h2>
+        <p>Que tal trabalharmos juntos em algo incrível? Estou sempre aberto a novas oportunidades ou parcerias em projetos inovadores. Preencha o formulário abaixo e entrarei em contato com você o mais breve possível! &#128232;</p>
+        <div class="contact_info">
+            <a href="https://wa.me/5535992527472" class="contact_card">
+                <h3><i class="fa-brands fa-whatsapp"></i> WhatsApp</h3>
+                <p>+55 35 9 9252-7472 </p>
+            </a>
+            <div class="contact_card">
+                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <p>edson.gentil.junior@gmail.com </p>
+            </div>
+        </div>
+        <form action="https://formspree.io/f/xvggealk" method="post" class="contact_form">
+            <label class="label_input">
+                Nome:
+                <input type="text" name="name" placeholder="Como posso te chamar" required>
+            </label>
+            <label class="label_input">
+                Email:
+                <input type="email" name="email" placeholder="Qual é o seu email" required>
+            </label>
+            <label class="label_input">
+                Mensagem:
+                <textarea name="message" placeholder="Sobre o que quer falar"></textarea>
+            </label>
+            <button type="submit" class="primary">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer_social">
+            <h4>Siga-me nas redes sociais</h4>
+            <div class="social_icons">
+                <a href="https://www.instagram.com/edsong.jr?igsh=MW0wY25iZzRub3UxNg=="><img src="./assets/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="./assets/github.svg" alt="github"></a>
+                <a href="https://www.linkedin.com/in/edson-junior-918171272"><img src="./assets/linkedin.svg" alt="linkedin"></a>
+            </div>
+        </div>
+        <div class="footer_links">
+            <a href="#">Inicio</a>
+            <a href="#aboult">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contatos">Contatos</a>
+        </div>
+        <p>&copy; 2025 Edson Jr. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="index.js"></script>
 </body>
 </html>
