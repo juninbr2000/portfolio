@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/baa7dffef8.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Edson Jr | Portfolio</title>
 
@@ -46,11 +47,11 @@
     <section class="main_section container" id="aboult">
         <div class="my_info">
             <h2 class="title">Deixe-me apresentar &#129309;</h2>
-            <p>
+            <p data-aos="fade-up">
                 Sou Desenvolvedor Front-End, apaixonado por transformar designs em sites interativos e funcionais. 
                 Comecei minha jornada na programação em 2022 e, desde então, tenho explorado as infinitas possibilidades dessa área, que continua a me surpreender a cada dia.
             </p>
-            <a href="./assets/Edson currículo2025.docx" class='primary' download>Baixar CV</a>
+            <a href="./assets/Edson currículo2025.docx" class='primary' download data-aos="fade-up">Baixar CV</a>
         </div>
         <div class="habillity">
             <h2 class="title">Minhas habilidades &#128640;</h2>
@@ -65,7 +66,7 @@
 
     <section class="projects container" id="projetos">
         <h2 class="title">Meus Projetos &#128207;</h2>
-        <div class="project_card">
+        <div class="project_card" data-aos="zoom-in">
             <img src="./assets/imoveisgentil_mockup.png" alt="" class="mockup">
             <div class="project_card_info">
                 <h3 class="project_card_title">Imóveis Gentil</h3>
@@ -83,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="project_card">
+        <div class="project_card" data-aos="zoom-in">
             <img src="./assets/linkscape_mockup.png" alt="" class="mockup">
             <div class="project_card_info">
                 <h3 class="project_card_title">LinkScape</h3>
@@ -103,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="project_card">
+        <div class="project_card" data-aos="zoom-in">
             <img src="./assets/filmania_mockup.png" alt="" class="mockup">
             <div class="project_card_info">
                 <h3 class="project_card_title">Filmania (em desenvolvimento)</h3>
@@ -175,5 +176,9 @@
     </footer>
     
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

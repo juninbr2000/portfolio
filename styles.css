@@ -134,7 +134,7 @@
         width: 80vw;
         list-style: none;
         border-radius: 20px;
-        background-color: #00000055;
+        background-color: #000000c5;
         border: 1px solid #1f1f1f;
         z-index: 50;
         padding: 10px 0;
@@ -206,7 +206,7 @@
     margin: auto;
     width: 320px;
     height: 320px;
-    background-image: linear-gradient(90deg, #00e4f9, #d700a1, #00e4f9, #d700a1);
+    background-image: linear-gradient(90deg, var(--destaque-primary), var(--destaque-secondary));
     border-radius: 50%;
     background-size: 300%;
     background-position: left 0;
@@ -227,7 +227,7 @@
     display: block;
     height: 90px;
     border-radius: 50%;
-    background-image: linear-gradient(90deg, #00e4f9, #d700a1, #00e4f9, #d700a1);
+    background-image: linear-gradient(90deg, var(--destaque-primary), var(--destaque-secondary));
     background-size: 300%;
 }
 .bolha:nth-last-child(-n + 1){
@@ -296,9 +296,10 @@
 
 /* Projetos */
 .projects{
-    background-image: url('./assets/bg_space.jpeg');
+    background-image: url('./assets/Android\ Expanded\ -\ 1.jpg');
     background-position: center;
-    background-size: 130vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 30px 20px 60px;
     color: var(--text-color);
@@ -335,6 +336,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 25px;
         margin-bottom: 20px;
         & .icon{
@@ -424,7 +426,7 @@
 footer{
     background-color: #090224;
     padding: 50px 20px;
-    color: #fefefe;
+    color: var(--text-color);
     & h4{
         font-size: 1.2em;
     }
@@ -434,7 +436,7 @@ footer{
         font-size: 2.3em;
         margin-top: 25px;
         & a{
-            color: #fefefe;
+            color: var(--text-color);
             width: 35px;
             cursor: pointer;
             & img{
@@ -450,13 +452,13 @@ footer{
     & a{
         padding: 10px;
         font-size: 1.2em;
-        color: #fefefe;
+        color: var(--text-color);
         font-weight: 600;
         border-bottom: 1px solid;
     }
 }
 footer p{
-    color: #fefefe;
+    color: var(--text-color);
     font-size: .8em;
     text-align: center;
     margin-top: 50px;
@@ -484,7 +486,7 @@ footer p{
         transform: rotate(0deg);
     }
     50%{
-        transform: rotate(25deg);
+        transform: rotate(30deg);
     }
     100%{
         transform: rotate(0deg);
@@ -492,7 +494,7 @@ footer p{
  }
 #hands{
     display: inline-block;
-    animation: ascenar 1s .5s 2 ease-in-out;
+    animation: ascenar 1s 1.5s 3 ease-in-out;
 }
 
 

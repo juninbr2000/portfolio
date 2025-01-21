@@ -24,7 +24,7 @@ async function getHability () {
     // Itera sobre as chaves do objeto
     Object.entries(data).forEach(([key, value]) => {
         const skillHTML = `
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="${value.icon}" alt="${key}" class="skill-icon">
                 <span>${key.toUpperCase()}</span>
             </div>
