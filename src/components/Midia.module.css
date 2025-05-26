@@ -1,0 +1,38 @@
+.side{
+    background-color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    padding: 10px 0px;
+    font-size: 1.2em;
+    transform: translateY(-50%);
+    z-index: 10000;
+}
+.side a {
+    color: var(--background);
+    text-decoration: none;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.side a:hover{
+    color: var(--secondary);
+    transform: translateY(-5px);
+    & svg{
+        -webkit-filter: drop-shadow( 0px 0px 2px rgba(212, 141, 245, 0.7));
+        filter: drop-shadow( 0px 0px 2px rgba(212, 141, 245, 0.7));
+    }
+}
+
+.side button{
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    border-bottom: 1px solid ;
+    width: 80%;
+    color: var(--background);
+}
