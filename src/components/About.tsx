@@ -44,7 +44,7 @@ function About() {
             .map((skill: any, index) => (
               <div className={styles.card} key={index}>
                 <div className={styles.iconContainer}>
-                  <img src={`/${skill.icon}`} alt={skill.name} />
+                  <img src={`${import.meta.env.BASE_URL}${skill.icon}`} alt={skill.name} />
                 </div>
                 <p>{skill.name}</p>
               </div>

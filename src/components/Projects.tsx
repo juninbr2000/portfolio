@@ -61,7 +61,7 @@ export default function Projects() {
         </div>
 
         <div className={styles.image}>
-          <img src={`${proj.imagem}`} alt={proj.title} />
+          <img src={`${import.meta.env.BASE_URL}${proj.imagem}`} alt={proj.title} />
         </div>
       </div>
       )) : (
