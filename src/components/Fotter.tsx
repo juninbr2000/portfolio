@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Fotter() {
     const today = new Date()
     const year = today.getFullYear()

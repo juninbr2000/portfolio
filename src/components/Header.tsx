@@ -1,4 +1,3 @@
-import React from 'react'
 import profileImage from '../assets/Profile.jpeg'
 import styles from './Header.module.css';
 import WaveBackground from './WavesComp';

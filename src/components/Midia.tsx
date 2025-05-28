@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import styles from './Midia.module.css'
 import { useTheme } from '../context/ThemeContext'
 import { FaLinkedin, FaGithub, FaInstagram, FaMoon, FaSun} from 'react-icons/fa'

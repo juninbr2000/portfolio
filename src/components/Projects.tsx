@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Projects.module.css';
 import { FaArrowRight, FaGithub } from 'react-icons/fa';
 
