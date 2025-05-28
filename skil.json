@@ -1,0 +1,20 @@
+[
+  { "name": "HTML", "icon": "html.svg", "category": "Linguagens" },
+  { "name": "CSS", "icon": "css.svg", "category": "Linguagens" },
+  { "name": "JavaScript", "icon": "javascript.svg", "category": "Linguagens" },
+  { "name": "TypeScript", "icon": "typescript.svg", "category": "Linguagens" },
+
+  { "name": "React", "icon": "react.svg", "category": "Front-End" },
+  { "name": "React Native", "icon": "react.svg", "category": "Front-End" },
+  { "name": "Tailwind", "icon": "tailwind.svg", "category": "Front-End" },
+  { "name": "Next.js", "icon": "next.svg", "category": "Front-End" },
+  { "name": "Angular", "icon": "angular.svg", "category": "Front-End" },
+
+  { "name": "Node.js", "icon": "node.svg", "category": "Back-End" },
+  { "name": "Express", "icon": "express.svg", "category": "Back-End" },
+  { "name": "MongoDB", "icon": "mongodb.svg", "category": "Back-End" },
+  { "name": "Firebase", "icon": "firebase.svg", "category": "Back-End" },
+
+  { "name": "Git", "icon": "git.svg", "category": "Ferramentas" },
+  { "name": "Figma", "icon": "figma.svg", "category": "Ferramentas" }
+]
