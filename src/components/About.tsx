@@ -7,7 +7,7 @@ function About() {
   const categorias = ["Linguagens", "Front-End", "Back-End", "Ferramentas"];
 
   const getData = async () => {
-    const res = await fetch('../../skil.json')
+    const res = await fetch(`${import.meta.env.BASE_URL}skil.json`);
 
     const data = await res.json()
     setHabilidade(data)

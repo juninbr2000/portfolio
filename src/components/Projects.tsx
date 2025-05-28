@@ -24,7 +24,7 @@ export default function Projects() {
 
   const GetProjects = async () => {
     try{
-      const res = await fetch('../../projects.json')
+      const res = await fetch(`${import.meta.env.BASE_URL}projects.json`)
 
       const data = await res.json()
 
