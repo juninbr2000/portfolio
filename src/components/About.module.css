@@ -139,9 +139,18 @@
   .container{
     display: flex;
     justify-content: space-between;
+    padding: 80px;
   }
   .text{
     font-size: 1.1em;
     margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Ajustes para monitores grandes */
+  .container{
+    max-width: 1200px;
+    margin: auto;
   }
 }

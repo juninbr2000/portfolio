@@ -2,17 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styles from './Projects.module.css';
 import { FaArrowRight, FaGithub } from 'react-icons/fa';
 
-import linkscape from '../assets/linkscape_mockup.png';
-import imoveis from '../assets/imoveisgentil_mockup.png';
-import filmania from '../assets/filmania_mockup.png'
-
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [projects, setProjects] = useState([])
 
   const handleScroll = () => {
     const cards = document.querySelectorAll(`.${styles.card}`);
     const scrollY = window.scrollY;
-    const offset = window.innerWidth <= 768 ? 700 : 200;
+    const offset = window.innerWidth <= 768 ? 700 : 600;
 
     cards.forEach((card, index) => {
       const offsetTop = (card as HTMLElement).offsetTop - offset; // Ajuste conforme necessário para o ponto de ativação
@@ -25,7 +22,22 @@ export default function Projects() {
     });
   };
 
+  const GetProjects = async () => {
+    try{
+      const res = await fetch('../../projects.json')
+
+      const data = await res.json()
+
+      console.log(data)
+      setProjects(data)
+    } catch (error){
+      console.error( error )
+    }
+  }
+
   useEffect(() => {
+    GetProjects()
+    console.log(projects)
     window.addEventListener('scroll', handleScroll);
     // Dispara handleScroll uma vez no carregamento para definir o estado inicial
     handleScroll();
@@ -33,63 +45,30 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='projects'>
       <h1 className={styles.section_title}>Meus Projetos</h1>
 
-      <div className={`${styles.card} ${activeIndex === 0 ? styles.active : ''} ${styles.linkscape}`}>
+      {projects ? projects.map((proj: any) => (
+        <div className={`${styles.card} ${activeIndex === proj.id ? styles.active : ''} ${styles[proj.name]}`} key={proj.id}>
         <div className={styles.content}>
-          <h2 className={styles.title}>LinkScape</h2>
-          <p>
-            Um agregador de links onde você pode criar seu próprio perfil,
-            personalizar seu layout e compartilhar seus links favoritos.
-          </p>
+          <h2 className={styles.title}>{proj.title}</h2>
+          <p>{proj.description}</p>
 
           <div className={styles.button_container}>
-            <button className='primary'>Deploy <FaArrowRight /></button>
-            <button className='secondary'>Código <FaGithub /></button>
+            <a href={proj.preview} target='_blanck' rel='noopener noreferrer' className='primary'>Deploy <FaArrowRight /></a>
+            {proj.repositorio ? <a href={proj.repositorio} target='_blanck' rel='noopener noreferrer' className='secondary'>Código <FaGithub /></a> : null }
           </div>
         </div>
 
         <div className={styles.image}>
-          <img src={linkscape} alt="Linkscape" />
+          <img src={`${proj.imagem}`} alt={proj.title} />
         </div>
       </div>
+      )) : (
+        <p>Erro ao buscar Projetos</p>
+      )}
 
-      <div className={`${styles.card} ${activeIndex === 1 ? styles.active : ''} ${styles.imoveis}`}>
-        <div className={styles.content}>
-          <h2 className={styles.title}>Imóveis Gentil</h2>
-          <p>
-            Plataforma de imóveis moderna, onde os usuários podem buscar e visualizar
-            propriedades disponíveis, com uma interface leve e responsiva.
-          </p>
-
-          <div className={styles.button_container}>
-            <button className='primary'>Deploy <FaArrowRight /></button>
-          </div>
-        </div>
-
-        <div className={styles.image}>
-          <img src={imoveis} alt="Imóveis Gentil" />
-        </div>
-      </div>
-      <div className={`${styles.card} ${activeIndex === 2 ? styles.active : ''} ${styles.filmania}`}>
-        <div className={styles.content}>
-          <h2 className={styles.title}>Filmania</h2>
-          <p>
-            Plataforma de imóveis moderna, onde os usuários podem buscar e visualizar
-            propriedades disponíveis, com uma interface leve e responsiva.
-          </p>
-
-          <div className={styles.button_container}>
-            <button className='primary'>Deploy <FaArrowRight /></button>
-            <button className='secondary'>Código <FaGithub /></button>
-          </div>
-        </div>
-
-        <div className={styles.image}>
-          <img src={filmania} alt="filmania" />
-        </div>
-      </div>
+      <a href="https://github.com/juninbr2000" target='_blanck' rel='noopener noreferrer' className={styles.button}>Veja Mais no GitHub <FaGithub /></a>
     </div>
   );
 }

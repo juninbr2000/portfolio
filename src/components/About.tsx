@@ -27,6 +27,9 @@ function About() {
         <p className={styles.text}>
           Minha jornada no desenvolvimento começou em 2022 e, desde então, venho me surpreendendo com o que é possível construir com apenas algumas linhas de código.
         </p>
+        <p className={styles.text}>
+          Também estou me aventurando no mundo mobile com React Native e no backend com Firebase e MongoDB.
+        </p>
       </div>
       <div className={styles.container_items}>
         <h1 className={styles.title}>Minhas habilidades</h1>

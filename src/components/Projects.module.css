@@ -61,6 +61,17 @@
   filter: blur(10px);
 }
 
+.button{
+  padding: 8px 20px;
+  background-color: var(--destaque);
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--background);
+  z-index: 30;
+}
+
 .linkscape {
   background-image: linear-gradient(#416198 0%, #2A416A 60%, #416198 61%);
   color: #fefefe;
@@ -77,6 +88,9 @@
 
 @media (min-width: 576px) {
   /* Ajustes para tablets na vertical e celulares na horizontal */
+  .container{
+    padding: 30px 60px;
+  }
   .image{
     width: 60%;
     margin: 30px auto 5px;
@@ -86,6 +100,9 @@
 
 @media (min-width: 768px) {
   /* Ajustes para tablets na horizontal e laptops menores */
+  .container{
+    padding: 30px 80px;
+  }
   .card{
     display: flex;
     align-items: center;
@@ -102,9 +119,22 @@
 @media (min-width: 992px) {
   /* Ajustes para a maioria dos desktops e laptops */
   .container{
+    padding: 30px 100px;
     gap: 150px;
   }
   .card{
     padding: 40px 60px ;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Ajustes para monitores grandes */
+  .card{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .button{
+    max-width: 1200px;
+    margin: auto;
   }
 }

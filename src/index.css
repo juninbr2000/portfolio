@@ -20,7 +20,7 @@ body.dark {
   --ligth-bg: #303030;
   --text: #fefefe;
   --destaque: #81f200;
-}
+} 
 
 *{
   margin: 0;
@@ -42,6 +42,7 @@ body {
   background-color: var(--destaque);
   display: flex;
   align-items: center;
+  text-decoration: none;
   gap: 5px;
   color: #000;
   transition: all .3s ease;
@@ -66,12 +67,19 @@ body {
   font-weight: 600;
   display: flex;
   align-items: center;
+  text-decoration: none;
   gap: 5px;
   transition: all .3s ease;
 }
 .secondary:hover{
   border-color: var(--destaquehover);
   color: var(--destaquehover);
+}
+
+.text{
+  color: var(--text);
+  text-align: center;
+  padding: 50px;
 }
 
 @media (prefers-color-scheme: light) {

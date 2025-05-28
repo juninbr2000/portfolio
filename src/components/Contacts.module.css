@@ -105,6 +105,11 @@ form button {
     align-self: flex-end;
 }
 
+.alert{
+    color: var(--destaque);
+    text-align: center;
+}
+
 @media (min-width: 768px) {
   /* Ajustes para tablets na horizontal e laptops menores */
 
@@ -120,5 +125,13 @@ form button {
 
   form{
     width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Ajustes para monitores grandes */
+  .container{
+    max-width: 1200px;
+    margin: auto;
   }
 }

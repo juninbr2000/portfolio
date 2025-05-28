@@ -1,0 +1,28 @@
+[
+    {
+        "name": "linkscape",
+        "title": "LinkScape",
+        "description": "Um agregador de links onde você pode criar seu próprio perfil, personalizar seu layout e compartilhar seus links favoritos.",
+        "imagem": "/linkscape_mockup.png",
+        "preview": "https://linkscape.netlify.app",
+        "repositorio": "https://github.com/juninbr2000/linkScape",
+        "id": 0
+    },
+    {
+        "name": "imoveis",
+        "title": "imoveis Gentil",
+        "description": "Plataforma de imóveis moderna, onde os usuários podem buscar e visualizar propriedades disponíveis, com uma interface leve e responsiva.",
+        "imagem": "/imoveisgentil_mockup.png",
+        "preview": "https://imoveisgentil.com.br",
+        "id": 1
+    },
+    {
+        "name": "filmania",
+        "title": "Filmania",
+        "description": "Filmania, utiliza a api do TMDB, e conta com a exibiçao dos filmes mais vistos da semana, além das informações do seu filme favorito.",
+        "imagem": "/filmania_mockup.png",
+        "preview": "https://filmaniabyjr.vercel.app",
+        "repositorio": "https://github.com/juninbr2000/movieMania",
+        "id": 2
+    }
+]

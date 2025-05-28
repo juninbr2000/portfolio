@@ -8,13 +8,13 @@ const Header = () => {
     <header className={styles.container}>
       <WaveBackground />
       <div className={styles.apresentation}>
-        <h1>Olá! Me chamo</h1>
+        <h2>Olá! Me chamo</h2>
         <h1><span className={styles.destaque}>Edson Júnior, </span>e sou</h1>
-        <h1><span className={styles.destaque}>Desenvolvedor Front-End</span></h1>
+        <h2><span className={styles.destaque}>Desenvolvedor Front-End</span></h2>
 
         <div className={styles.button_container}>
-          <button className='primary'>Projetos</button>
-          <button className='secondary'>Baixar CV</button>
+          <a className='primary' href='#projects'>Projetos</a>
+          <a className='secondary' href='/Edson currículo2025.docx'>Baixar CV</a>
         </div>
       </div>
       <div className={styles.image_container}>

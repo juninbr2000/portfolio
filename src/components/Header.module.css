@@ -7,14 +7,18 @@
 .apresentation{
     color: var(--text);
     & h1{
-        font-weight: 400;
-        font-size: 1em;
+      font-weight: 400;
+      font-size: 1.2em;
+    }
+    & h2 {
+      font-size: 1em;
+      font-weight: 400;
     }
 }
 
 
 .destaque{
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
     background: -webkit-linear-gradient(359deg, var(--destaque), var(--secondary));
     -webkit-background-clip: text;
@@ -98,5 +102,13 @@
     width: 50%;
     transform: scale(1.1);
     padding-left: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Ajustes para monitores grandes */
+  .container{
+    max-width: 1200px;
+    margin: auto;
   }
 }
