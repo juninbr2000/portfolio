@@ -1,114 +1,156 @@
 .container{
-    padding: 100px 50px;
-    position: relative;
-    overflow: hidden;
+  background-image: linear-gradient(var(--background), transparent 60%),
+                    var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .apresentation{
-    color: var(--text);
-    & h1{
-      font-weight: 400;
-      font-size: 1.2em;
-    }
-    & h2 {
-      font-size: 1em;
-      font-weight: 400;
-    }
+  padding: 150px 25px 80px;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text);
 }
 
-
+.apresentation h1, .apresentation h2{
+  font-weight: 300;
+  font-size: 1.1em;
+}
 .destaque{
-    font-size: 1.6em;
-    font-weight: bold;
-    background: -webkit-linear-gradient(359deg, var(--destaque), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, var(--destaque), var(--destaquehover));
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.4em;
+}
+.button_container{
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
 }
 
-.button_container{
-    margin-top: 5em;
-    display: flex;
-    gap: 20px;
-    position: relative;
-}
 .image_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6em;
-    position: relative;
-}
-.profile_img{
-    width: 240px;
-    height: 240px;
-    border-radius: 10px;
-    box-shadow: -5px 5px 0 var(--destaque);
-    animation: moveup 4.5s infinite .5s ease
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  position: relative;
 }
 .square{
-    background-image: linear-gradient(90deg, var(--destaque), var(--secondary));
-    width: 65px;
-    height: 65px;
-    display: block;
-    z-index: 2;
-    border-radius: 10px;
-    position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 2px 5px #ffffff50,
+              inset 0 -2px 5px #00000050,
+              0 2px 5px #00000050;
+  background-color: var(--glassBackground);
 }
-.square:last-child{top: -20px; left: -15px; animation: moveup 5s infinite 1s ease;}
-.square:first-child{bottom: -15px; right: -10px; animation: moveup 6s infinite ease;}
-
-
-@keyframes moveup {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+.square::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.5px; /* Aqui você controla a "largura da borda" */
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
 }
+.square:first-child{
+  left: -15px;
+  bottom: 60px;
+  transform: rotate(25deg)
+              scale(1.6);
+}
+.square:last-child{
+  right: 5px;
+  bottom: 130px;
+  transform: rotate(-8deg) scale(.95);
+}
+
+.profile_img{
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 5px #ffffff50,
+              inset 0 -2px 5px #00000050,
+              0 2px 5px #00000050;
+  position: relative;
+}
+.profile_img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.5px; /* Aqui você controla a "largura da borda" */
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
 
 @media (min-width: 576px) {
   /* Ajustes para tablets na vertical e celulares na horizontal */
-  .container{
-    padding: 120px 70px 60px;
-  }
   .image_container{
-    width: 340px;
-    margin: 80px auto;
+    max-width: 450px;
   }
 }
 
 @media (min-width: 768px) {
   /* Ajustes para tablets na horizontal e laptops menores */
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .image_container{
-        width: 300px;
-    }
+  .container{
+    flex-direction: row;
+    padding-top: 130px;
+    padding-bottom: 90px;
+    align-items: center;
+  } 
+  .apresentation{
+    width: 50%;
+    padding: 60px 20px;
+  }
+  .image_container{
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   /* Ajustes para a maioria dos desktops e laptops */
-  .container{
-    align-items: center;
-    justify-content: space-around;
-  }
-  .apresentation{
-    width: 50%;
-    transform: scale(1.1);
-    padding-left: 60px;
-  }
+  
 }
 
 @media (min-width: 1200px) {
   /* Ajustes para monitores grandes */
-  .container{
-    max-width: 1200px;
-    margin: auto;
+  .apresentation{
+    max-width: 700px;
+  }
+  .image_container{
+    
   }
 }

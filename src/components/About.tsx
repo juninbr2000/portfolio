@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './About.module.css'
+import { FaDownload } from 'react-icons/fa';
 
 function About() {
 
@@ -18,9 +19,9 @@ function About() {
   }, [])
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='sobre'>
       <div className={styles.me}>
-        <h1 className={styles.title}>Deixe me apresentar</h1>
+        <h1 className={styles.title}>Deixe me apresentar 🤝</h1>
         <p className={styles.text}>
           Sou desenvolvedor front-end, apaixonado por criar interfaces modernas e funcionais. Gosto de transformar ideias em experiências interativas e estou sempre em busca de novos aprendizados.
         </p>
@@ -30,13 +31,15 @@ function About() {
         <p className={styles.text}>
           Também estou me aventurando no mundo mobile com React Native e no backend com Firebase e MongoDB.
         </p>
+
+        <a className='primary' href='/Edson currículo2025.docx'>Baixar curriculo  <FaDownload /></a>
       </div>
       <div className={styles.container_items}>
-        <h1 className={styles.title}>Minhas habilidades</h1>
+        <h1 className={styles.title}>Minhas habilidades 🚀</h1>
         <div className={styles.card_container}>
 
         {categorias.map((categoria: any) => (
-      <div key={categoria} className={styles.categoria}>
+        <div key={categoria} className={styles.categoria}>
         <h2>{categoria}</h2>
         <div className={styles.grid}>
           {habilidade
