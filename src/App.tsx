@@ -13,9 +13,9 @@ function App() {
       <Midia />
       <Header />
       <About/>
-      <Projects />
-      <Contacts />
-      <Fotter />
+      {/* <Projects /> */}
+      {/* <Contacts /> */}
+      {/* <Fotter /> */}
     </>
   )
 }

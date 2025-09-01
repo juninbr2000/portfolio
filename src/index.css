@@ -1,26 +1,12 @@
 :root{
-  --background: #1f1f1f;
-  --ligth-bg: #2f2f2f;
+  --background: #e1e1e1;
+  --darkBG: #000
   --text: #fefefe;
   --destaque: #009DFF;
   --destaquehover: #00FFCC;
   --glassBackground: rgba(255, 255, 255, .03)
 }
 
-body.light {
-  --background: #cfcfcf;
-  --ligth-bg: #b7c6dc;
-  --text: #1f1f1f;
-  --destaque: #009DFF;
-  --bg: url('./assets/ligth-bg.jpg')
-}
-
-body.dark {
-  --background: #1f1f1f;
-  --ligth-bg: #2c344a;
-  --text: #fefefe;
-  --bg: url('./assets/image.png')
-} 
 
 *{
   margin: 0;
@@ -36,51 +22,34 @@ img{
   max-width: 100%;
 }
 .primary{
-  padding: 8px 25px;
-  background-color: var(--glassBackground);
+  background-color: #000;
+  color: #fefefe;
+  text-decoration: none;
+  padding: 10px 25px;
+  font-size: 1.12em;
+  font-weight: 600;
   border-radius: 20px;
-  font-size: 1.1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  color: var(--text);
-  text-decoration: none;
-  position: relative;
-  backdrop-filter: blur(5px);
-  box-shadow: inset 0 2px 8px #ffffff50,
-              inset 0 -2px 8px #00000050,
-              0 2px 5px #00000050;
-  & svg{
-    font-size: 1.2em;
-    padding: 2px;
-  }
+  gap: 10px;
 }
 
-.white{
-  color: #fefefe;
-}
-
-.primary::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 0.5px; /* Aqui você controla a "largura da borda" */
+.secondary{
+  color: #000;
+  border: 3px solid;
+  padding: 7px 22px;
   border-radius: 20px;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.05)
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 1;
+  text-decoration: none;
+  font-size: 1.12em;
+  font-weight: 600;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
 
 
 .text{
