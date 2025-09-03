@@ -73,7 +73,7 @@ function Contacts() {
                     <textarea value={message} placeholder='sobre o que quer falar' onChange={(e) => setMessage(e.target.value)}></textarea>
                 </label>
                 {alerta ? <p className={styles.alert}>{alerta}</p> : null}
-                <button className='primary white'>Enviar <FaPaperPlane /></button>
+                <button className='primary destaque'>Enviar <FaPaperPlane /></button>
             </form>
         </div>
     </div>

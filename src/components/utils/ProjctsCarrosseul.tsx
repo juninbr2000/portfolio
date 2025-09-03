@@ -70,9 +70,9 @@ export default function ProjectsCarousel({ projects, id }: Props) {
                                 href={proj.repositorio}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className='primary white'
+                                className='secondary dest'
                             >
-                                GitHub <FaGithub />
+                                Code <FaGithub />
                             </a>
                         )}
                         {proj.preview && (
@@ -80,7 +80,7 @@ export default function ProjectsCarousel({ projects, id }: Props) {
                                 href={proj.preview}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className='secondary dark'
+                                className='primary destaque'
                             >
                                 Preview <FaExternalLinkAlt />
                             </a>

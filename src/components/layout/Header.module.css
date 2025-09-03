@@ -28,6 +28,7 @@
   font-weight: 700;
   font-size: 1.2em;
   display: inline-block;
+  color: #3b82f6;
   opacity: 0;
   transform: translateY(10px);
   animation: fadeSlide 0.5s ease forwards;
@@ -38,6 +39,18 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.hands {
+  display: inline-block;
+  animation: wave 1s 3s 3 ease-in-out;
+  transform-origin: bottom center; /* Define o ponto fixo */
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .buttonCont{

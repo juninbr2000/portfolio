@@ -24,14 +24,14 @@ const Header = () => {
       <img src={profileImage} className={styles.profile_img} />
       <div>
         <h1 className={styles.apresentation}>
-          👋 Olá! Me chamo <br />
+          <span className={styles.hands}>👋</span> Olá! Me chamo <br />
           <span className={styles.destaques}>Edson Junior</span>, e sou <br />
           Desevolvedor <span className={styles.destaques} key={selectedWord}>{word[selectedWord]}</span>
         </h1>
 
         <div className={styles.buttonCont}>
-          <a href="#" className='primary'><FaGithub /> GitHub</a>
-          <a href="#" className='secondary'><LuTable2 /> Projetos</a>
+          <a href="https://github.com/juninbr2000" className='primary' target='_blanck'><FaGithub /> GitHub</a>
+          <a href="#projects" className='secondary'><LuTable2 /> Projetos</a>
         </div>
       </div>
 

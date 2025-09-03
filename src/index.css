@@ -51,13 +51,22 @@ img{
 }
 
 .dark{
-  border-color: #fefefe;
-  color: #fefefe;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.dest{
+  border-color: #3b82f6;
+  color: #3b82f6;
 }
 
 .white{
-  color: #000;
-  background-color: #fefefe;
+  color: #000000;
+  background-color: #ffffff;
+}
+.destaque{
+  color: #000000;
+  background-color: #3b82f6;
 }
 
 

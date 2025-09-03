@@ -24,7 +24,7 @@ function About({id}: AboutProps) {
         tanto em código quanto em design.
       </p>
 
-      <a href="#" className='primary' data-aos="fade-up">Baixar Curriculo</a>
+      <a href="Edson currículo2025.docx" className='primary' data-aos="fade-up">Baixar Curriculo</a>
     </section>
   )
 }
