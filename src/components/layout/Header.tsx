@@ -1,5 +1,5 @@
 import { FaGithub } from 'react-icons/fa';
-import profileImage from '../assets/Profile.png'
+import profileImage from '../../assets/Profile.png'
 import styles from './Header.module.css';
 import { useEffect, useState } from 'react';
 import { LuTable2 } from 'react-icons/lu';

@@ -1,7 +1,8 @@
 .container{
   background-color: #e1e1e1;
-  padding: 280px 45px 100px;
+  padding: 400px 45px 100px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   min-height: 100vh;
   box-sizing: border-box;
@@ -38,9 +39,43 @@
     transform: translateY(0);
   }
 }
+
 .buttonCont{
   display: flex;
   gap: 10px;
   margin-top: 50px;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 920px) {
+  .container{
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5em;
+    padding: 400px 60px 100px;
+  }
+
+  .profile_img{
+    width: 30%;
+  }
+
+  .apresentation{
+    font-size: 2em;
+    width: 100%;
+  }
+
+  .buttonCont{
+    justify-content: flex-start;
+    gap: 2em;
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    padding: 400px 80px 100px;
+    max-width: 1200px;
+    margin: auto;
+  }
 }

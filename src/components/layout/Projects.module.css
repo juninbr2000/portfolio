@@ -1,0 +1,134 @@
+.container{
+    padding: 440px 25px 50px;
+    color: #fefefe;
+    & > a{
+        margin-top: 50px;
+    }
+}
+
+.card_container{
+    margin-top: 3em;
+    position: relative;
+}
+
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.carousel::after{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(#000, #fefefe, #000);
+    display: block;
+    position: absolute;
+    left: 15px;
+}
+.arrow{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #000;
+    border: 2px solid;
+    color: #fefefe;
+    position: absolute;
+}
+.arrow:first-child{
+    left: -20px;
+    top: 22em;
+}
+.arrow:last-child{
+    right: -20px;
+    top: 22em;
+}
+
+.year{
+    font-weight: 200;
+    font-size: .8em;
+    margin-bottom: 10px;
+}
+
+.projectImage{
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 180px;
+}
+
+.stacks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+}
+.stack{
+    background-color: #3f3f3f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #000;
+    font-size: .8em;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.counter{
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 920px) {
+    .container{
+        padding: 440px 60px 50px;
+        & h2{
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+
+    .projectImage{
+        width: 50%;
+        float: left;
+        margin-right: 1em;
+        height: auto;
+    }
+    .arrow:first-child{
+        top: 10em;
+    }
+    .arrow:last-child{
+        top: 10em;
+    }
+
+    .carousel::after{
+        left: 40px;
+    }
+    .description{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .stacks{
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+}
+
+@media (min-width: 1200px){
+  .container{
+    padding: 440px 80px 50px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}

@@ -44,14 +44,14 @@ function Contacts() {
   return (
     <div className={styles.container} id='contato'>
         <div className={styles.fast_info}>
-            <h1 className={styles.title}>Entre em Contato ✉️</h1>
+            <h1 className={styles.title} data-aos="fade-up">Entre em Contato</h1>
             <p>Que tal trabalharmos juntos em algo incrível? Estou sempre aberto a novas oportunidades ou parcerias em projetos inovadores.</p>
             <div className={styles.button_cont}>
-                <a className={styles.fast_buttons} href="mailto:edson.gentil.junior@gmail.com" target='_blank'  rel='noopener noreferrer'>
+                <a className={styles.fast_buttons} href="mailto:edson.gentil.junior@gmail.com" target='_blank'  rel='noopener noreferrer' data-aos="fade-right">
                     <p><FaEnvelope /> Email</p>
                     <p className={styles.span}>edson.gentil.junior@gmail.com</p>
                 </a>
-                <a className={styles.fast_buttons} href="https://wa.me/5535992527472" target='_blank' rel='noopener noreferrer'>
+                <a className={styles.fast_buttons} href="https://wa.me/5535992527472" target='_blank' rel='noopener noreferrer' data-aos="fade-right">
                     <p><FaWhatsapp /> Whatsapp</p>
                     <p className={styles.span}>+55 (35) 9 9252-7472</p>
                 </a>
@@ -73,7 +73,7 @@ function Contacts() {
                     <textarea value={message} placeholder='sobre o que quer falar' onChange={(e) => setMessage(e.target.value)}></textarea>
                 </label>
                 {alerta ? <p className={styles.alert}>{alerta}</p> : null}
-                <button className='primary'>Enviar <FaPaperPlane /></button>
+                <button className='primary white'>Enviar <FaPaperPlane /></button>
             </form>
         </div>
     </div>

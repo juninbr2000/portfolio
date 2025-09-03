@@ -1,0 +1,35 @@
+.container{
+  padding: 120px 45px 200px;
+  background: linear-gradient(#e1e1e1 0%, #b1b1b1 30% 80%, #e1e1e100 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  & p {
+    text-align: center;
+    font-size: 1.12em;
+    line-height: 1.2em;
+  }
+}
+
+
+
+@media screen and (min-width: 920px) {
+  .container{
+    padding: 120px 60px 200px;
+    align-items: center;
+    & h2{
+      font-size: 2em;
+    }
+    & p{
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    padding: 120px 20% 200px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}

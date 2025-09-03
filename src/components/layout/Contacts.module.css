@@ -1,6 +1,6 @@
 .container{
     padding: 80px 25px;
-    color: var(--text);
+    color: #fefefe;
 }
 
 .fast_info{
@@ -93,12 +93,13 @@
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 920px){
     .container{
         display: flex;
         flex-direction: row;
+        padding: 60px;
         gap: 5%;
-        align-items: center;
+        justify-content: space-between;
     }
     .fast_info{
         width: 40%;

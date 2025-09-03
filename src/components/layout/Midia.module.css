@@ -5,7 +5,7 @@
   width: 100vw;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(#e1e1e1 60%, #e1e1e100);
+  /* background: linear-gradient(#e1e1e188 60%, #e1e1e100); */
   height: 9em;
   z-index: 2;
   transition: all .8s ease-in-out;
