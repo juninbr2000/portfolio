@@ -32,7 +32,7 @@ export default function Projects({id}: projectProps) {
 
       <h2 data-aos="fade-up">Meus Projetos</h2>   
   
-      <ProjectsCarousel projects={projects} />
+      {projects ? <ProjectsCarousel projects={projects} /> : <p>Erro ao buscar os projetos</p>}
 
       <a href="https://github.com/juninbr2000" target='_blanck' rel='noopener noreferrer' className='primary white' data-aos="fade-up">Veja Mais no GitHub <FaGithub /></a>
     </div>
