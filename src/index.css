@@ -1,10 +1,7 @@
 :root{
   --background: #e1e1e1;
-  --darkBG: #000
-  --text: #fefefe;
-  --destaque: #009DFF;
-  --destaquehover: #00FFCC;
-  --glassBackground: rgba(255, 255, 255, .03)
+  --text: #000;
+  --destaque: #3b82f6;
 }
 
 
@@ -56,17 +53,17 @@ img{
 }
 
 .dest{
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: var(--destaque);
+  color: var(--destaque);
 }
 
 .white{
-  color: #000000;
+  color: var(--text);
   background-color: #ffffff;
 }
 .destaque{
-  color: #000000;
-  background-color: #3b82f6;
+  color: var(--text);
+  background-color: var(--destaque);
 }
 
 
