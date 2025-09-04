@@ -1,51 +1,89 @@
 [
     {
+        "name": "miniblog",
+        "title": "MiniBlog",
+        "year": "2023", 
+        "description": "Meu primeiro projeto feito em react, Pagina onde o usuario pode criar, editar, e apagar seus post, é uma pequena rede social.  ",
+        "imagem": "miniblog_mockup.png",
+        "preview": "react-miniblog-teste.netlify.app",
+        "repositorio": "https://github.com/juninbr2000/miniblog-project",
+        "stacks": [
+            {"name": "Html"},
+            {"name": "CSS"},
+            {"name": "Javascript"},
+            {"name": "React"},
+            {"name": "firebase"}
+        ],
+        "id": 4
+    },
+    {
         "name": "linkscape",
-        "title": "LinkScape 🌐",
+        "title": "LinkScape",
+        "year": "2024", 
         "description": "Um agregador de links onde você pode criar seu próprio perfil, personalizar seu layout e compartilhar seus links favoritos.",
         "imagem": "linkscape_mockup.png",
         "preview": "https://linkscape.netlify.app",
         "repositorio": "https://github.com/juninbr2000/linkScape",
-        "icons": [
-            {"icon": "html.svg", "name": "Html"},
-            {"icon": "css.svg", "name": "CSS"},
-            {"icon": "javascript.svg", "name": "Javascript"},
-            {"icon": "react.svg", "name": "React"},
-            {"icon": "firebase.svg", "name": "firebase"},
-            {"icon": "node.svg", "name": "node"}
+        "stacks": [
+            {"name": "Html"},
+            {"name": "CSS"},
+            {"name": "Javascript"},
+            {"name": "React"},
+            {"name": "firebase"},
+            {"name": "node"}
         ],
         "id": 0
     },
     {
         "name": "imoveis",
-        "title": "imoveis Gentil 🏠",
+        "title": "imoveis Gentil",
+        "year": "2024",
         "description": "Plataforma de imóveis moderna, onde os usuários podem buscar e visualizar propriedades disponíveis, com uma interface leve e responsiva.",
         "imagem": "imoveisgentil_mockup.png",
         "preview": "https://imoveisgentil.com.br",
-        "icons": [
-            {"icon": "html.svg", "name": "Html"},
-            {"icon": "css.svg", "name": "CSS"},
-            {"icon": "javascript.svg", "name": "Javascript"},
-            {"icon": "react.svg", "name": "React"},
-            {"icon": "firebase.svg", "name": "firebase"},
-            {"icon": "node.svg", "name": "node"}
+        "stacks": [
+            {"name": "Html"},
+            {"name": "CSS"},
+            {"name": "Javascript"},
+            {"name": "React"},
+            {"name": "firebase"}
         ],
         "id": 1
     },
     {
         "name": "filmania",
-        "title": "Filmania 📽️",
+        "title": "Filmania",
+        "year": "2025",
         "description": "Filmania, utiliza a api do TMDB, e conta com a exibiçao dos filmes mais vistos da semana, além das informações do seu filme favorito.",
         "imagem": "filmania_mockup.png",
         "preview": "https://filmaniabyjr.vercel.app",
         "repositorio": "https://github.com/juninbr2000/movieMania",
-        "icons": [
-            {"icon": "html.svg", "name": "Html"},
-            {"icon": "css.svg", "name": "CSS"},
-            {"icon": "typescript.svg", "name": "TypeScript"},
-            {"icon": "next.svg", "name": "Next"},
-            {"icon": "tailwind.svg", "name": "Tailwind"}
+        "stacks": [
+            {"name": "Html"},
+            {"name": "CSS"},
+            {"name": "TypeScript"},
+            {"name": "Next"},
+            {"name": "Tailwind"}
         ],
         "id": 2
+    },
+    {
+        "name": "myRango",
+        "title": "MyRango delivery",
+        "year": "2025",
+        "description": "Um app ficticio de pedidos de lanches, o usuario pode criar uma conta, adicionar um endereço, simular o pagamento e acompanhar o status do pedido",
+        "imagem": "myrango_mockup.png",
+        "repositorio": "https://github.com/juninbr2000/MyRango",
+        "stacks": [
+            {"name": "Html"},
+            {"name": "CSS"},
+            {"name": "Javascript"},
+            {"name": "TypeScript"},
+            {"name": "React"},
+            {"name": "Tailwind"},
+            {"name": "MongoDB"},
+            {"name": "Express"}
+        ],
+        "id": 3
     }
 ]
