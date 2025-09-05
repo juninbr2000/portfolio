@@ -14,18 +14,18 @@ function App() {
   useEffect(() => {
     const circle = document.querySelector<HTMLDivElement>(".circle");
 
-    if (!circle) return; // 🔥 Garante que não dá erro se não achar o círculo
+    if (!circle) return; 
 
     // Calcula a diagonal da tela
     const diagonal = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2) * 1.1;
-    const initialSize = 100; // Largura inicial do círculo
+    const initialSize = 100; 
     const maxScale = diagonal / initialSize;
 
     const handleScroll = () => {
       const sobre = document.getElementById("sobre");
       const projects = document.getElementById("projects");
 
-      if (!sobre || !projects) return; // 🔥 Garante que existem
+      if (!sobre || !projects) return;
 
       const scrollTop = window.scrollY;
       const start = sobre.offsetTop + sobre.offsetHeight / 2;
@@ -44,8 +44,7 @@ function App() {
 
     useEffect(() => {
     AOS.init({
-      duration: 1000, // duração da animação em ms
-      once: true,     // anima só uma vez
+      duration: 1000,     
     });
   }, []);
 
