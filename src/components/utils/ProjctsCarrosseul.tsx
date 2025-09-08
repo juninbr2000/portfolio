@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styles from '../layout/Projects.module.css';
 
@@ -37,6 +37,14 @@ export default function ProjectsCarousel({ projects, id }: Props) {
     if (!projects || projects.length === 0) return null;
 
     const proj = projects[current];
+
+    useEffect(() => {
+        const intervalID = setInterval(() => {
+            nextProject()
+        }, 10000);
+
+        return () => clearInterval(intervalID) 
+    }, [])
 
     return (
         <div className={styles.card_container} id={id}>
@@ -93,9 +101,11 @@ export default function ProjectsCarousel({ projects, id }: Props) {
                 </button>
             </div>
 
-            <p className={styles.counter}>
-                {current + 1} / {projects.length}
-            </p>
+            <div className={styles.counter}>
+                {projects && projects.length > 0 && projects.map((_, index) => (
+                    <span key={index} className={index === current ? `${styles.dots} ${styles.active}` : `${styles.dots}`} onClick={() => setCurrent(index)}></span>
+                ))}
+            </div>
         </div>
     );
 }

@@ -14,11 +14,11 @@ function App() {
   useEffect(() => {
     const circle = document.querySelector<HTMLDivElement>(".circle");
 
-    if (!circle) return; 
+    if (!circle) return;
 
     // Calcula a diagonal da tela
     const diagonal = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2) * 1.1;
-    const initialSize = 100; 
+    const initialSize = 100;
     const maxScale = diagonal / initialSize;
 
     const handleScroll = () => {
@@ -34,7 +34,7 @@ function App() {
       let progress = (scrollTop - start) / (end - start);
       progress = Math.min(Math.max(progress, 0), 1);
 
-      const scale = 1 + progress * (maxScale - 1); 
+      const scale = 1 + progress * (maxScale - 1);
       circle.style.transform = `translate(-50%, -50%) scale(${scale})`;
     };
 
@@ -42,9 +42,9 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     AOS.init({
-      duration: 1000,     
+      duration: 1000,
     });
   }, []);
 
@@ -52,7 +52,7 @@ function App() {
     <>
       <Midia />
       <Header />
-      <About id='sobre'/>
+      <About id='sobre' />
       <div className='circle'></div>
       <Projects id='projects' />
       <Contacts />

@@ -1,18 +1,19 @@
-.container{
+.container {
     padding: 440px 25px 50px;
     color: #fefefe;
-    & > a{
+
+    &>a {
         margin-top: 50px;
     }
 }
 
-.card_container{
+.card_container {
     margin-top: 3em;
     position: relative;
 }
 
 
-.carousel{
+.carousel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,7 @@
     box-sizing: border-box;
 }
 
-.carousel::after{
+.carousel::after {
     content: '';
     width: 1px;
     height: 100%;
@@ -30,7 +31,8 @@
     position: absolute;
     left: 15px;
 }
-.arrow{
+
+.arrow {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -41,22 +43,24 @@
     color: #fefefe;
     position: absolute;
 }
-.arrow:first-child{
+
+.arrow:first-child {
     left: -20px;
     top: 22em;
 }
-.arrow:last-child{
+
+.arrow:last-child {
     right: -20px;
     top: 22em;
 }
 
-.year{
+.year {
     font-weight: 200;
     font-size: .8em;
     margin-bottom: 10px;
 }
 
-.projectImage{
+.projectImage {
     border-radius: 10px;
     width: 100%;
     margin-top: 20px;
@@ -64,13 +68,14 @@
     height: 180px;
 }
 
-.stacks{
+.stacks {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     margin-top: 20px;
 }
-.stack{
+
+.stack {
     background-color: #777;
     padding: 5px 10px;
     border-radius: 20px;
@@ -79,56 +84,96 @@
     font-size: .8em;
 }
 
-.links{
+.links {
     display: flex;
     gap: 10px;
     margin-top: 20px;
 }
 
-.counter{
-    text-align: center;
-    margin-top: 20px;
+.counter {
+    background-color: #292929;
+    padding: 10px;
+    display: block;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    margin: 40px auto;
+    justify-content: center;
+    gap: 10px;
 }
 
+.dots {
+    background-color: #777;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    transition: all .5s ease;
+}
+
+.active {
+    width: 25px;
+    background: linear-gradient(90deg, #ffffff 50%, #c5c5c5 51%);
+    background-size: 200%;
+    animation: progress 10s linear infinite;
+}
+
+@keyframes progress {
+    0% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
+
 @media screen and (min-width: 920px) {
-    .container{
+    .container {
         padding: 440px 60px 50px;
-        & h2{
+
+        & h2 {
             font-size: 2em;
             text-align: center;
         }
     }
 
-    .projectImage{
+    .projectImage {
         width: 50%;
         float: left;
         margin-right: 1em;
-        height: auto;
+        min-height: 240px;
     }
-    .arrow:first-child{
-        top: 10em;
-    }
-    .arrow:last-child{
+
+    .arrow:first-child {
         top: 10em;
     }
 
-    .carousel::after{
+    .arrow:last-child {
+        top: 10em;
+    }
+
+    .carousel::after {
         left: 40px;
     }
-    .description{
+
+    .description {
         margin-top: 2em;
         margin-bottom: 2em;
     }
-    .stacks{
+
+    .stacks {
         margin-top: 1em;
         margin-bottom: 3em;
     }
 }
 
-@media (min-width: 1200px){
-  .container{
-    padding: 440px 80px 50px;
-    max-width: 1200px;
-    margin: auto;
-  }
+@media (min-width: 1200px) {
+    .container {
+        padding: 440px 80px 50px;
+        max-width: 1200px;
+        margin: auto;
+    }
 }
