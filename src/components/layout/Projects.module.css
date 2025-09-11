@@ -92,13 +92,13 @@
 
 .counter {
     background-color: #292929;
-    padding: 10px;
+    padding: 20px;
     display: block;
     border-radius: 30px;
     display: flex;
     align-items: center;
     width: 120px;
-    margin: 40px auto;
+    margin-top: 40px;
     justify-content: center;
     gap: 10px;
 }
@@ -113,10 +113,10 @@
 }
 
 .active {
-    width: 25px;
+    width: 55px;
     background: linear-gradient(90deg, #ffffff 50%, #c5c5c5 51%);
     background-size: 200%;
-    animation: progress 10s linear infinite;
+    animation: progress 10s linear forwards;
 }
 
 @keyframes progress {
@@ -129,6 +129,23 @@
     }
 }
 
+.carroseulContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.midiaControl{
+    padding: 15px;
+    border-radius: 50%;
+    color: #fefefe;
+    margin-top: 40px;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (min-width: 920px) {
     .container {

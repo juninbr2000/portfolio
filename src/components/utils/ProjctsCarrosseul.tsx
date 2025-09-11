@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight, FaPlay, FaPause } from 'react-icons/fa';
 import styles from '../layout/Projects.module.css';
 
 interface Stack {
@@ -25,6 +25,7 @@ interface Props {
 
 export default function ProjectsCarousel({ projects, id }: Props) {
     const [current, setCurrent] = useState(0);
+    const [autoFlow, setAutoFlow] = useState(true)
 
     const nextProject = () => {
         setCurrent((prev) => (prev + 1) % projects.length);
@@ -39,12 +40,14 @@ export default function ProjectsCarousel({ projects, id }: Props) {
     const proj = projects[current];
 
     useEffect(() => {
-        const intervalID = setInterval(() => {
-            nextProject()
-        }, 10000);
+        if(autoFlow === true){
+            const intervalID = setInterval(() => {
+                nextProject()
+            }, 10000);
 
-        return () => clearInterval(intervalID) 
-    }, [])
+            return () => clearInterval(intervalID) 
+        }
+    }, [autoFlow])
 
     return (
         <div className={styles.card_container} id={id}>
@@ -101,10 +104,13 @@ export default function ProjectsCarousel({ projects, id }: Props) {
                 </button>
             </div>
 
-            <div className={styles.counter}>
-                {projects && projects.length > 0 && projects.map((_, index) => (
-                    <span key={index} className={index === current ? `${styles.dots} ${styles.active}` : `${styles.dots}`} onClick={() => setCurrent(index)}></span>
-                ))}
+            <div className={styles.carroseulContainer}>
+                <div className={styles.counter}>
+                    {projects && projects.length > 0 && projects.map((_, index) => (
+                        <span key={index} className={index === current ? `${styles.dots} ${styles.active}` : `${styles.dots}`} onClick={() => setCurrent(index)}></span>
+                    ))}
+                </div>
+                <button className={styles.midiaControl} onClick={() => setAutoFlow(!autoFlow)}>{autoFlow === true ? <FaPause />: <FaPlay/>}</button>
             </div>
         </div>
     );
