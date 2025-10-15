@@ -8,6 +8,7 @@ import Midia from './components/layout/Midia'
 import Projects from './components/layout/Projects'
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import CustomCursor from './components/utils/CustomCursor'
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <>
+      <CustomCursor />
       <Midia />
       <Header />
       <About id='sobre' />

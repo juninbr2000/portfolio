@@ -34,7 +34,7 @@ export default function Projects({id}: projectProps) {
   
       {projects && projects.length > 0 ? <ProjectsCarousel projects={projects} /> : <p>Erro ao buscar os projetos</p>}
 
-      <a href="https://github.com/juninbr2000" target='_blanck' rel='noopener noreferrer' className='primary white' data-aos="fade-up">Veja Mais no GitHub <FaGithub /></a>
+      <a href="https://github.com/juninbr2000" target='_blanck' rel='noopener noreferrer' className='primary white' data-aos="fade-up" data-hover>Veja Mais no GitHub <FaGithub /></a>
     </div>
   );
 }

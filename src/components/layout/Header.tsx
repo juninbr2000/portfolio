@@ -30,8 +30,8 @@ const Header = () => {
         </h1>
 
         <div className={styles.buttonCont}>
-          <a href="https://github.com/juninbr2000" className='primary' target='_blanck'><FaGithub /> GitHub</a>
-          <a href="#projects" className='secondary'><LuTable2 /> Projetos</a>
+          <a href="https://github.com/juninbr2000" className='primary' target='_blanck' data-hover><FaGithub /> GitHub</a>
+          <a href="#projects" className='secondary' data-hover><LuTable2 /> Projetos</a>
         </div>
       </div>
 

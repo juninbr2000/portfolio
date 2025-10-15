@@ -110,7 +110,7 @@ export default function ProjectsCarousel({ projects, id }: Props) {
                         <span key={index} className={index === current ? `${styles.dots} ${styles.active}` : `${styles.dots}`} onClick={() => setCurrent(index)}></span>
                     ))}
                 </div>
-                <button className={styles.midiaControl} onClick={() => setAutoFlow(!autoFlow)}>{autoFlow === true ? <FaPause />: <FaPlay/>}</button>
+                <button className={styles.midiaControl} onClick={() => setAutoFlow(!autoFlow)} data-hover>{autoFlow === true ? <FaPause />: <FaPlay/>}</button>
             </div>
         </div>
     );
