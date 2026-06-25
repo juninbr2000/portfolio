@@ -1,0 +1,101 @@
+.nav_container{
+    background-color: #ffffff11;
+    backdrop-filter: blur(10px);
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo_container{
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--light-green);
+    font-size: 1.25em;
+}
+
+
+
+.menu_list{
+    background-color: var(--light-green);
+    list-style-type: none;
+    height: 45px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100px;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+.visible{
+    top: 0px;
+    height: 100vh;
+    opacity: 1;
+    z-index: 10;
+    padding: 50px 10px;
+}
+.menu_item a {
+    text-decoration: none;
+    color: var(--dark-green);
+    font-size: 1.75em;
+    font-weight: 500;
+    display: block;
+    padding: 8px 30px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.menu_btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 12;
+}
+
+.line {
+  stroke-width: 3;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.menu_btn.active .top {
+  transform: translateY(6px) rotate(45deg);
+  stroke: var(--dark-green);
+}
+
+.menu_btn.active .bottom {
+    transform: translateY(-6px) rotate(-45deg);
+    stroke: var(--dark-green);
+}
+.buttons_container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.buttons{
+    padding: 10px;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-text-color);
+    cursor: pointer;
+    background-color: transparent;
+}

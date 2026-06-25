@@ -1,41 +1,24 @@
+:root{
+  --primary-color: #D2FF00;
+  --dark-green: #282C20;
+  --light-green: #DDE1D2;
+  --black-color: #111112;
+  --destaque-font: "Fraunces", serif;
+}
 *{
-    cursor: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer; /* ainda funciona */
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-green);
 }
 
-.cursor-dot {
-  width: 4px;
-  height: 4px;
-  background: #fefefe;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.cursor {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #fefefe;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9998;
-  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease;
-}
-
-.cursor.grow {
-  width: 45px;
-  height: 45px;
-  border-width: 3px;
+.destaque {
+  font-family: var(--destaque-font);
+  color: var(--primary-color);
+  font-weight: 800;
+  font-style: italic;
 }
