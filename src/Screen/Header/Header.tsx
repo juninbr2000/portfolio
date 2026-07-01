@@ -1,117 +1,135 @@
-import { TopographyBackground } from '../../Components/TopographyBG/TopographyBackground';
-import styles from './Header.module.css';
+import { useLayoutEffect, useRef } from 'react'
+import styles from './Header.module.css'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { IoIosArrowRoundForward } from 'react-icons/io'
+import gsap from 'gsap'
+import { SplitText } from 'gsap/all'
 
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+function Header() {
+    const socialRef = useRef<HTMLDivElement>(null)
+    const nameRef = useRef(null)
+    const helloRef= useRef(null)
+    const areaRef = useRef(null)
+    const buttonRef = useRef(null)
 
-import gsap from 'gsap';
-import { SplitText } from 'gsap/SplitText';
+    useLayoutEffect(() => {
+        if(!socialRef.current) return
 
-import linkscape from '/linkscape_mockup.png'
-import imv from '/imoveisv2_mockup.png'
-import rango from '/myrango_mockup.png'
+        const ctx = gsap.context(() => {
+            const targets = gsap.utils.toArray<HTMLElement>(socialRef.current?.children || [])
 
-gsap.registerPlugin(SplitText);
+            targets.forEach((target) => {
+                const calculateMagnetic = (e: MouseEvent) => {
+                    const rect = target.getBoundingClientRect()
 
-const ESPECIALIDADES = ['Frontend', 'Mobile', 'Web', 'React'];
+                    const centerX = rect.left + rect.width / 2
+                    const centerY = rect.top + rect.height / 2
 
-const Header: React.FC = () => {
-  const [selectedWord, setSelectedWord] = useState<number>(0)
-  const [introEnd, setIntroEnd] = useState(false)
+                    const x = e.clientX - centerX
+                    const y = e.clientY - centerY
 
-  const introRef = useRef(null)
-  const nameRef = useRef(null)
-  const highlightRef = useRef(null)
-  const buttonsRef = useRef<HTMLDivElement>(null)
+                    gsap.to(target, {
+                        x: x * 0.35,
+                        y: y * 0.35,
+                        scale: 1.25,
+                        duration: 0.3,
+                        ease: "power2.out",
+                        overwrite: "auto"
+                    })
+                }
 
-  useLayoutEffect(() => {
-    if(!introRef.current || !nameRef.current || !highlightRef.current || !buttonsRef.current) return
+                const resetMagnetic = () => {
+                    gsap.to(target, {
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.5,
+                        ease: "elastic.out(1, 0.3)",
+                        overwrite: "auto"
+                    })
+                }
 
-    const splitIntro = new SplitText(introRef.current, {type: 'words'})
-    const splitName = new SplitText(nameRef.current, {type: 'chars'})
-    const splitHighlight = new SplitText(highlightRef.current, {type: 'words'})
-    
-    gsap.set(buttonsRef.current.children, {y: 30, opacity: 0})
-    
-    const tl = gsap.timeline({
-      onComplete: ()=> {
-        setIntroEnd(true)
-      }
-    })
+                target.addEventListener('mousemove', calculateMagnetic)
+                target.addEventListener('mouseleave', resetMagnetic)
+            })
+        })
 
-    tl.from(splitIntro.words, {
-      y: 30,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power3.out',
-      stagger: 0.04,
-    })
-    .from(splitName.chars, {
-      y: 40,
-      opacity: 0,
-      duration: 0.7,
-      ease: 'power3.out',
-      stagger: 0.03,
-    }, '-=0.1')
-    .from(splitHighlight.words, {
-      y: 30,
-      opacity: 0,
-      duration: 0.7,
-      ease: 'power3.out',
-      stagger: 0.04,
-    }, '-=0.2')
-    .to(buttonsRef.current.children, {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: 'back.out(1.5)',
-      stagger: 0.2
-    }, '-=0.2')
+        return () => ctx.revert()
+    }, [])
 
-    return () => {
-      splitIntro.revert();
-      splitName.revert();
-      splitHighlight.revert();
-      tl.kill();
-    };
-  }, [])
+    useLayoutEffect(() => {
+        if(!nameRef.current || !helloRef.current || !areaRef.current) return
+        if(!socialRef.current || !buttonRef.current) return
 
+        const nameChars = new SplitText(nameRef.current, {type: 'chars'})
+        const helloWord = new SplitText(helloRef.current, {type: 'words'})
+        const areaWord = new SplitText(areaRef.current, {type: 'words'})
 
-  useEffect(() => {
-    if(!introEnd) return
+        gsap.set(
+            [...socialRef.current.children, buttonRef.current],
+            {
+                opacity: 0
+            }
+        )
 
-    const timer = setTimeout(() => {
-      setSelectedWord(prev => (prev + 1) % ESPECIALIDADES.length)
-    }, 5000)
+        const tl = gsap.timeline()
 
-    return () => clearTimeout(timer)
-  }, [selectedWord, introEnd])
+        tl.from(nameChars.chars, {
+            opacity: 0,
+            y: 40,
+            duration: 0.7,
+            stagger: 0.04,
+            ease: 'power3.out'
+        }),
+        tl.from(helloWord.words, {
+            opacity: 0,
+            y: 20,
+            duration: 0.3,
+            stagger:0.04,
+            ease: 'power3.out'
+        }),
+        tl.from(areaWord.words, {
+            opacity: 0,
+            y: 20,
+            duration: 0.3,
+            stagger:0.04,
+            ease: 'power3.out'
+        }, '-=0.1'),
+        tl.to(socialRef.current.children, {
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+            ease: 'power3.out',
+            stagger: 0.04
+        }),
+        tl.to(buttonRef.current, {
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out'
+        }, '2.5')
 
+    }, [])
 
   return (
-    <header className={styles.container} id='inicio'>
-      <TopographyBackground />
-      <div className={styles.title_container}>
-        <div>
-          <p className={styles.apresentation} ref={introRef}>Olá! me chamo</p>
-          <h1 className={styles.name} ref={nameRef}>Edson Junior</h1>
-          <h2 className={styles.subtitle} ref={highlightRef}>e sou Desenvolvedor <span className='destaque'>{ESPECIALIDADES[selectedWord]}</span></h2>
-        </div>
-        <div className={styles.buttons_container} ref={buttonsRef}>
-          <a href="#" className='primary_btn'>Projetos</a>
-          <a href="#" className='secondary_btn'>Contatos</a>
-        </div>
-      </div>
-      {/* só exibe em telas maiores */}
-      <div className={styles.images}> 
-        <img src={linkscape} className={`${styles.img} ${styles.second}`}/>
-        <img src={imv} className={`${styles.img} ${styles.primary}`}/>
-        <img src={rango} className={`${styles.img} ${styles.thrid}`}/>
-      </div>
-      <div className={styles.scroll}>
-        <span className='destaque'>scroll</span>
-      </div>
-    </header>
-  );
-};
+    <div className={styles.container}>
 
-export default Header;
+        <div className={styles.social_container} ref={socialRef}>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
+            <a href="#"><FaGithub /></a>
+        </div>
+
+        <div className={styles.apresentation}>
+            <p className={styles.hello} ref={helloRef}>Olá! eu sou</p>
+            <h1 className={styles.name} ref={nameRef}>Edson Junior</h1>
+            <h2 className={styles.area} ref={areaRef}>Desenvolvedor <span className='destaque'>Frontend</span></h2>
+
+        </div>
+        
+        <a href="#" ref={buttonRef} className='main_button'>Veja meus projetos <IoIosArrowRoundForward /></a>
+
+    </div>
+  )
+}
+
+export default Header

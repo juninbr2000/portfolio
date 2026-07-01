@@ -1,10 +1,19 @@
 :root{
-  --primary-color: #D2FF00;
-  --dark-green: #282C20;
-  --light-green: #DDE1D2;
-  --black-color: #111112;
+  --black-color: #0f0f0f;
+  --white-bg: #E4E4E4;
   --destaque-font: "Fraunces", serif;
 }
+
+::selection {
+  background-color: #ff9d00; 
+  color: #000000;           
+}
+
+::-moz-selection {
+  background-color: #ff9d00;
+  color: #000000;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -12,13 +21,11 @@
 }
 
 body{
-  font-family: 'Inter', sans-serif;
-  background-color: var(--dark-green);
+  font-family: "Inter", sans-serif;
+  background-color: var(--white-bg);
 }
 
-.destaque {
+.destaque{
   font-family: var(--destaque-font);
-  color: var(--primary-color);
-  font-weight: 800;
-  font-style: italic;
+  font-weight: 700;
 }
