@@ -1,6 +1,7 @@
 :root{
   --black-color: #0f0f0f;
   --white-bg: #E4E4E4;
+  --color-destaque: #E41613;
   --destaque-font: "Fraunces", serif;
 }
 
@@ -28,4 +29,21 @@ body{
 .destaque{
   font-family: var(--destaque-font);
   font-weight: 700;
+  color: var(--color-destaque);
+}
+
+.time{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  line-height: 25px;
+  font-size: .75em;
+}
+.local{
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.hour{
+  letter-spacing: 3px;
 }

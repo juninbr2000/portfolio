@@ -4,6 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
+import { VerticalGridBackground } from '../../Components/VertcalLinesBackgorund/VercicalLinesBackground'
 
 function Header() {
     const socialRef = useRef<HTMLDivElement>(null)
@@ -32,6 +33,7 @@ function Header() {
                         x: x * 0.35,
                         y: y * 0.35,
                         scale: 1.25,
+                        color: '#E41613',
                         duration: 0.3,
                         ease: "power2.out",
                         overwrite: "auto"
@@ -43,6 +45,7 @@ function Header() {
                         x: 0,
                         y: 0,
                         scale: 1,
+                        color: '#1f1f1f',
                         duration: 0.5,
                         ease: "elastic.out(1, 0.3)",
                         overwrite: "auto"
@@ -112,7 +115,7 @@ function Header() {
 
   return (
     <div className={styles.container}>
-
+        <VerticalGridBackground />
         <div className={styles.social_container} ref={socialRef}>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaLinkedin /></a>

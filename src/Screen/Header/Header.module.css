@@ -1,13 +1,14 @@
 .container{
     margin: 10px;
-    min-height: calc(100vh - 10px * 2);
-    background-image: linear-gradient(75deg, #ffcc00, #ffea00);
+    min-height: calc(100dvh - 10px * 2);
+    background-image: linear-gradient(75deg, #D5D5D5, #C5C5C5);
     border-radius: 20px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .social_container{
     display: flex;
@@ -52,10 +53,13 @@
 
 @media screen and (min-width: 720px) {
     .social_container a{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .name{
         font-size: 5em;
+    }
+    .apresentation{
+        padding-top: 10px;
     }
 }
 @media screen and (min-width: 1220px) {
@@ -64,7 +68,7 @@
         margin: 10px 10px;
     }
     .social_container a{
-        font-size: 2em;
+        font-size: 1.5em;
         width: 100px;
         height: 100px;
     }
