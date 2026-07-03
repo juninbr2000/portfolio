@@ -114,7 +114,7 @@ function Header() {
     }, [])
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='home'>
         <VerticalGridBackground />
         <div className={styles.social_container} ref={socialRef}>
             <a href="#"><FaInstagram /></a>

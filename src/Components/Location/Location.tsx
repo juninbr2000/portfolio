@@ -13,7 +13,6 @@ function Location() {
                 timeZone: 'America/Sao_Paulo',
                 hour: '2-digit',
                 minute: '2-digit',
-                second: '2-digit'
             })
         
             setCurrentTime(hours)
@@ -21,7 +20,7 @@ function Location() {
 
         updateTime()
 
-        const interval = setInterval(updateTime, 1000)
+        const interval = setInterval(updateTime, 10000)
 
         return () => clearInterval(interval)
     }, [])

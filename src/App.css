@@ -6,13 +6,13 @@
 }
 
 ::selection {
-  background-color: #ff9d00; 
-  color: #000000;           
+  background-color: #E41613; 
+  color: #F1F1F1;           
 }
 
 ::-moz-selection {
-  background-color: #ff9d00;
-  color: #000000;
+  background-color: #E41613;
+  color: #F1F1F1;
 }
 
 *{
@@ -24,6 +24,7 @@
 body{
   font-family: "Inter", sans-serif;
   background-color: var(--white-bg);
+  scroll-behavior: smooth;
 }
 
 .destaque{

@@ -1,0 +1,63 @@
+.container{
+    height: 250vh;
+    position:relative;
+}
+
+.stickyContainer{
+    position:sticky;
+    top:0;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.intro{
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 600;
+    display: block;
+    will-change: transform;
+}
+
+.conclusion{
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 120px;
+    font-weight: 600;
+}
+
+.destaque{
+    text-transform: uppercase;
+    color: var(--color-destaque);
+    font-weight: 900;
+    font-size: 1.25em;
+}
+
+.images{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.image{
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+}
+
+@media screen and (min-width: 720px) {
+    .intro{
+        font-size: 4em;
+    }
+    .conclusion{
+        font-size: 4em;
+    }
+}
