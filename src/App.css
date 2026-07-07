@@ -1,6 +1,7 @@
 :root{
   --black-color: #0f0f0f;
   --white-bg: #E4E4E4;
+  --gray-color: #909090;
   --color-destaque: #E41613;
   --destaque-font: "Fraunces", serif;
 }
@@ -39,6 +40,9 @@ body{
   bottom: 20px;
   line-height: 25px;
   font-size: .75em;
+  color: #fff;
+  mix-blend-mode: difference;
+  z-index: 1000;
 }
 .local{
   font-weight: 400;

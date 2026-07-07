@@ -11,7 +11,7 @@
     padding: 10px 30px;
     color: var(--white-bg);
     border-radius: 5px;
-    transition: background .5s ease, transform .3s cubic-bezier(.34,.03,.64,1.35);
+    transition: background .5s ease, transform .3s cubic-bezier(.55,1.4,.83,.97);
 }
 
 .main_button:hover{

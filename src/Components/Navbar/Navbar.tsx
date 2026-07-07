@@ -108,7 +108,7 @@ function Navbar() {
             <ul className={styles.link_container} ref={menuRef}>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#aboult">Sobre Mim</a></li>
-                <li><a href="#">Projetos</a></li>
+                <li><a href="#projects">Projetos</a></li>
                 <li><a href="#">Contatos</a></li>
             </ul>
 

@@ -34,11 +34,11 @@ function PreProjects() {
       ease: "power3.out"
     })
       .from(conclusionRef.current, {
-        y: 100,        // Um deslocamento um pouco menor para a conclusão
+        y: 130,        
         opacity: 0,
-        scale: 0.85,
+        scale: 0.5,
         ease: "power3.out"
-      }, "+=0.5");
+      }, "+=0.1");
 
 
   }, { scope: sectionRef });
@@ -57,7 +57,7 @@ function PreProjects() {
 
     images.forEach((img, index) => {
       const randomXStart = gsap.utils.random(-450, 450);
-      const randomYStart = gsap.utils.random(300, 600); 
+      const randomYStart = gsap.utils.random(400, 700); 
       const randomRotate = gsap.utils.random(-20, 20);
       const randomScale = gsap.utils.random(0.7, 0.9);
 
@@ -71,7 +71,7 @@ function PreProjects() {
         yPercent: -50,
         rotate: randomRotate,
         scale: randomScale,
-        opacity: 0 
+        opacity: 1 
       });
 
       const tl = gsap.timeline({
@@ -108,7 +108,7 @@ function PreProjects() {
   }, {scope: sectionRef})
 
   return (
-    <section className={styles.container} ref={sectionRef}>
+    <section className={styles.container} ref={sectionRef} id='projects'>
       <div className={styles.stickyContainer}>
 
         <div className={styles.images} ref={imagesRef}>

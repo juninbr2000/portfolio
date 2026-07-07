@@ -1,7 +1,5 @@
 .container{
-    margin: 10px;
-    min-height: calc(100vh - 10px * 2);
-    background-image: linear-gradient(75deg, #D5D5D5, #C5C5C5);
+    min-height: 100vh;
     border-radius: 20px;
     box-sizing: border-box;
     display: flex;
