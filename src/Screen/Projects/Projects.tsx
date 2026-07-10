@@ -1,10 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Projects.module.css'
 import { MdArrowOutward } from 'react-icons/md'
+import { ScrollTrigger } from 'gsap/all'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { FaGithub } from 'react-icons/fa'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Projects() {
     const [project, setProject] = useState<any[]>([])
-
+    const sectionRef = useRef<HTMLDivElement>(null)
+    const cardsContainer = useRef<HTMLDivElement>(null)
+    
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(`${import.meta.env.BASE_URL}projects.json`)
@@ -12,19 +20,52 @@ function Projects() {
             const data = await res.json()
             if(data){
                 setProject(data)
+                requestAnimationFrame(() => {
+                    ScrollTrigger.refresh();
+                });
             }
         }
 
         getData()
     }, [])
 
-    console.log(project)
+    useGSAP(()=>{
+
+        const cards=gsap.utils.toArray<HTMLElement>(
+            `.${styles.card_container}`
+        )
+
+        cards.forEach((card)=>{
+            gsap.fromTo(card,
+                {
+                    opacity:0,
+                    y:120,
+                    scale:.88,
+                    filter:"blur(8px)"
+                },
+                {
+                    opacity:1,
+                    y:0,
+                    scale:1,
+                    filter:"blur(0px)",
+                    ease:"power3.out",
+                    scrollTrigger:{
+                        trigger:card,
+                        start:"top 80%",
+                        end:"center 30%",
+                        scrub:1
+                    }
+                }
+            )
+        })
+
+    }, {scope: cardsContainer, dependencies: [project]})
 
     return (
-        <section className={styles.container}>
-            <div className={styles.projects_container}>
+        <section className={styles.container} ref={sectionRef}>
+            <div className={styles.projects_container} ref={cardsContainer}>
                 {project && project.map((pr, index) => (
-                    <div key={index} className={styles.card_container}>
+                    <div key={index} className={styles.card_container} style={{ zIndex: index + 1 }}>
                         <div className={styles.meta}>
                             <div>
                                 <span className={styles.meta_title}>Ano</span>
@@ -58,6 +99,7 @@ function Projects() {
                     </div>
                 ))}
             </div>
+            <a href="#" className='main_button'>Veja outros projetos <FaGithub /></a>
         </section>
     )
 }
