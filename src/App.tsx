@@ -7,6 +7,7 @@ import Header from './Screen/Header/Header'
 import PreProjects from './Screen/PreProjects/PreProjects'
 import Projects from './Screen/Projects/Projects'
 import Lenis from 'lenis'
+import Skills from './Screen/Skills/Skills'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Aboult />
       <PreProjects />
       <Projects />
+      <Skills />
     </>
   )
 }
