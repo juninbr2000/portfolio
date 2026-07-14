@@ -89,7 +89,7 @@ function Projects() {
                             <h2 className={styles.title}>{pr.title}</h2>
 
                             <div className={styles.tag_container}>
-                                {pr.stacks.map((stack, index) => (
+                                {pr.stacks.map((stack: any, index: any) => (
                                     <p key={index} className={styles.tag}>{stack.name}</p>
                                 ))}
                             </div>
