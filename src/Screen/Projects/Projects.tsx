@@ -93,8 +93,11 @@ function Projects() {
                                     <p key={index} className={styles.tag}>{stack.name}</p>
                                 ))}
                             </div>
-
-                            <button className='main_button'>Conheca mais <MdArrowOutward /></button>
+                            
+                            <div style={{display: 'flex', gap: '20px'}}>
+                                {pr.repositorio && <a className='main_button' href={pr.repositorio} target='_blank' rel="noopener noreferrer" >Ver no Github <FaGithub /></a>}
+                                {pr.preview && <a className='main_button' href={pr.preview} target='_blank' rel="noopener noreferrer" >Preview <MdArrowOutward /></a>}
+                            </div>
                         </div>
                     </div>
                 ))}

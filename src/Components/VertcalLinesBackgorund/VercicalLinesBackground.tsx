@@ -55,7 +55,7 @@ export const VerticalGridBackground: React.FC = () => {
       
       for (let y = 0; y < canvas.height; y += lineSpacing) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(0, 0, 0, ${baseOpacity})`; // Horizontais fixas e bem discretas
+        ctx.strokeStyle = `rgba(0, 0, 0, ${baseOpacity * 2})`; // Horizontais fixas e bem discretas
         ctx.lineWidth = 1;
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
