@@ -2,6 +2,7 @@
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .content{
@@ -29,8 +30,31 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.25em;
-    border-bottom: 2px solid;
-    transition: color .3s ease, border .3s ease;
+    position: relative;
+    transition: color .3s ease;
+}
+
+.button svg{
+    transition:.35s;
+}
+
+.button:hover svg{
+    transform:translateX(10px);
+}
+
+.button::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    width:30%;
+    height:2px;
+    background:var(--color-destaque);
+    transition:.4s;
+}
+
+.button:hover::after{
+    width:100%;
 }
 
 .social_container{
@@ -49,7 +73,6 @@
     color: var(--color-destaque);
 }
 .button:hover{
-    border-bottom: 2px solid var(--color-destaque);
     color: var(--color-destaque);
 }
 .imagem_cont{

@@ -1,15 +1,39 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './Skills.module.css'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+
 
 function Skills() {
     const [activeCard, setActiveCard] = useState('frontend')
+    const container = useRef(null)
 
     const toggleCard = (cardId: any) => {
         setActiveCard(activeCard === cardId ? null : cardId)
     }
 
+    useGSAP(() => {
+        if(!container.current) return
+
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: container.current,
+                start:"top 75%",
+            }
+        })
+
+        tl.from(`.${styles.text_side}`, {
+            opacity: 0,
+            stagger: 0.5,
+            y: 20,
+            duration: .8,
+            ease: 'power3.out'
+        })
+
+    }, {scope: container})
+
     return (
-        <section className={styles.container}>
+        <section className={styles.container} ref={container}>
             <h2 className='section_title'>Minhas Habilidades</h2>
             
             <div className={styles.content}>

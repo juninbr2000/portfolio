@@ -55,7 +55,7 @@ function PreProjects() {
       yPercent: -50
     })
 
-    images.forEach((img, index) => {
+    images.forEach((img) => {
       const randomXStart = gsap.utils.random(-450, 450);
       const randomYStart = gsap.utils.random(400, 700); 
       const randomRotate = gsap.utils.random(-20, 20);
@@ -84,7 +84,7 @@ function PreProjects() {
 
       tl.to(images, {
         opacity: 1,
-        x: (index, target) => {
+        x: (_, target) => {
           const currentX = gsap.getProperty(target, "x") as number;
           return currentX * 1.5;
         },
@@ -92,7 +92,7 @@ function PreProjects() {
           const distances = [-1200, -1600, -2000, -1400, -1800, -2200];
           return distances[index % distances.length];
         },
-        rotate: (index, target) => {
+        rotate: (_, target) => {
           const currentRotate = gsap.getProperty(target, "rotate") as number;
           return currentRotate * 1.3;
         },

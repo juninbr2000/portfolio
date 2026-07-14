@@ -1,13 +1,62 @@
-import React from 'react'
 import styles from './Contact.module.css'
 import { VerticalGridBackground } from '../../Components/VertcalLinesBackgorund/VercicalLinesBackground'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import desktopImg from '../../assets/desktop.jpg'
+import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 function Contact() {
+
+    const container = useRef(null);
+
+    useGSAP(() => {
+
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: container.current,
+                start:"top 75%",
+            }
+        })
+
+        tl.from(`.${styles.section_title}`,{
+            y:40,
+            opacity:0,
+            duration:.8,
+            ease:"power3.out"
+        })
+
+        .from(`.${styles.text}`,{
+            y:25,
+            opacity:0,
+            duration:.6
+        },"-=.45")
+
+        .from(`.${styles.area_label}`,{
+            y:30,
+            opacity:0,
+            stagger:.18,
+            duration:.7
+        },"-=.2")
+
+        .from(`.${styles.social_container}`,{
+            y:20,
+            opacity:0,
+            duration:.5
+        },"-=.2")
+        .from(`.${styles.imagem_cont}`,{
+            clipPath:"inset(100% 0 0 0)",
+            opacity:0,
+            duration:1,
+            ease:"power3.out"
+        })
+
+    }, {scope:container})
+
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={container}>
         <VerticalGridBackground />
 
         <div className={styles.content}>
