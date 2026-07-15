@@ -56,7 +56,7 @@ function Contact() {
 
 
   return (
-    <div className={styles.container} ref={container}>
+    <div className={styles.container} ref={container} id='contact'>
         <VerticalGridBackground />
 
         <div className={styles.content}>
@@ -80,9 +80,9 @@ function Contact() {
                         </a>
                     </div>
                     <div className={styles.social_container}>
-                        <a href="#"><FaInstagram /></a>
-                        <a href="#"><FaGithub /></a>
-                        <a href="#"><FaLinkedin /></a>
+                        <a href="https://www.instagram.com/edsong.jr/" target='_blank' rel="noopener noreferrer" aria-label='Instagram'><FaInstagram /></a>
+                        <a href="https://www.linkedin.com/in/edson-junior-918171272/" target='_blank' rel="noopener noreferrer" aria-label='Linkedin'><FaLinkedin /></a>
+                        <a href="https://github.com/juninbr2000" target='_blank' rel="noopener noreferrer" aria-label='github'><FaGithub /></a>
                     </div>
                 </div>
 

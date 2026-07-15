@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styles from './Navbar.module.css'
 import gsap from 'gsap'
+import LinkHover from '../LinkHover/LinkHover'
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -106,10 +107,11 @@ function Navbar() {
             </a>
         
             <ul className={styles.link_container} ref={menuRef}>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#aboult">Sobre Mim</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li><a href="#home"><LinkHover>Início</LinkHover></a></li>
+                <li><a href="#aboult"><LinkHover>Sobre Mim</LinkHover></a></li>
+                <li><a href="#projects"><LinkHover>Projetos</LinkHover></a></li>
+                <li><a href="#skills"><LinkHover>Habilidades</LinkHover></a></li>
+                <li><a href="#contact"><LinkHover>Contatos</LinkHover></a></li>
             </ul>
 
             <button className={styles.buttons} onClick={() => setMenuOpen(!menuOpen)}>

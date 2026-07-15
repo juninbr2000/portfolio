@@ -117,9 +117,9 @@ function Header() {
     <div className={styles.container} id='home'>
         <VerticalGridBackground />
         <div className={styles.social_container} ref={socialRef}>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedin /></a>
-            <a href="#"><FaGithub /></a>
+            <a href="https://www.instagram.com/edsong.jr/" target='_blank' rel="noopener noreferrer" aria-label='Instagram'><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/edson-junior-918171272/" target='_blank' rel="noopener noreferrer" aria-label='Linkedin'><FaLinkedin /></a>
+            <a href="https://github.com/juninbr2000" target='_blank' rel="noopener noreferrer" aria-label='github'><FaGithub /></a>
         </div>
 
         <div className={styles.apresentation}>

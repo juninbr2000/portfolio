@@ -9,6 +9,7 @@ import Projects from './Screen/Projects/Projects'
 import Lenis from 'lenis'
 import Skills from './Screen/Skills/Skills'
 import Contact from './Screen/Contacts/Contact'
+import Footer from './Screen/Footer/Footer'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </>
   )
 }

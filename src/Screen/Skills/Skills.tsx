@@ -33,7 +33,7 @@ function Skills() {
     }, {scope: container})
 
     return (
-        <section className={styles.container} ref={container}>
+        <section className={styles.container} ref={container} id='skills'>
             <h2 className='section_title'>Minhas Habilidades</h2>
             
             <div className={styles.content}>

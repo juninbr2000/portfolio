@@ -102,7 +102,7 @@ function Projects() {
                     </div>
                 ))}
             </div>
-            <a href="#" className='main_button'>Veja outros projetos <FaGithub /></a>
+            <a href="https://github.com/juninbr2000?tab=repositories" target='_blank' rel="noopener noreferrer" className='main_button'>Veja outros projetos <FaGithub /></a>
         </section>
     )
 }

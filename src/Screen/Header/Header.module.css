@@ -63,7 +63,7 @@
 @media screen and (min-width: 1220px) {
     .container{
         max-width: 1820px;
-        margin: 10px 10px;
+        margin: 10px auto;
     }
     .social_container a{
         font-size: 1.5em;
