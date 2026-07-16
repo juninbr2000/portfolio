@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Location from './Components/Location/Location'
 import Navbar from './Components/Navbar/Navbar'
@@ -10,8 +10,11 @@ import Lenis from 'lenis'
 import Skills from './Screen/Skills/Skills'
 import Contact from './Screen/Contacts/Contact'
 import Footer from './Screen/Footer/Footer'
+import LoadingScreen from './Screen/LoadingScreen/LoadingScreen'
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
 
@@ -34,15 +37,20 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Location />
-      <Header />
-      <Aboult />
-      <PreProjects />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      {!isLoading && (
+        <>
+          <Navbar />
+          <Location />
+          <Header />
+          <Aboult />
+          <PreProjects />
+          <Projects />
+          <Skills />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </>
   )
 }
